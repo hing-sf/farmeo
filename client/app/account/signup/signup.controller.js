@@ -44,5 +44,8 @@ class SignupController {
   }
 }
 
+
+
 angular.module('pharmeoApp')
-  .controller('SignupController', SignupController);
+  .controller('SignupController', SignupController)
+  .service('FileUploader', FileUploader);
