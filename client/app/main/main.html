@@ -1,10 +1,136 @@
-<div class="intro-header">
-  <div class="intro-message">
-    <h1>#1 Prescription Marketplace for pharmacies and patients</h1>
-    <h3>Tap into our network of pharmacies for quality prescriptions at best prices</h3>
+<header>
+  <div class="intro-header">
+    <div class="intro-message">
+      <h1>World's first prescription marketplace</h1>
+      <div class="col-md-12">
+        <button type="submit" ui-sref="signup" class="btn-pharmeo">Get Started</button>
+      </div>
+    </div>
   </div>
-</div>
+</header>
+<section>
+  <div id="main-sec-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <table class="table">
+              <tr ng-repeat="item in main.section1">
+                <td>
+                  <img src="{{ item.image }}" width="40" alt="search icon">
+                </td>
+                <td>
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.message }}</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="main-sec-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Unlock year-round savings</h1>
+          <h3>we'll help you find prescription discounts</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-sec-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 writing-prescript">
+          <h2>Employees typically save $140 per year</h2>
+          <p>Pharmeo's recommendations help employees keep more of what they earn.</p>
+          <button type="submit" ui-sref="signup" class="btn-pharmeo">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-sec-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>
+            Deliver better care for your employees: <b>simple, affordable prescriptions</b>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-sec-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 why-pharmeo">
+          <h3>Why Pharmeo</h3>
+          <img src="/assets/icons/home.icon5.png" width="60" alt="money icons">
+          <h2>Cost optimization for employee</h2>
+          <h2>Convenience for employee</h2>
+          <h3>No waiting periods, no sign up fees.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-sec-6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 left-message">
+          <h2>Interested in partnering with us?</h2>
+          <h3>We Would love to hear from you about why you think it would be good to partner with us!</h3>
+        </div>
+        <div class="col-md-6 right-partner">
+          <form name="partner-form" ng-submit="partnerWithUs(partner)">
+            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Name.$valid && vm.submitted,
+                                                'has-error': partner-form.Pharmacy_Name.$invalid && vm.submitted }">
+              <input type="text"
+                     name="Pharmacy_Name"
+                     class="form-control custom-input2"
+                     ng-model="vm.main.pharmacy_name"
+                     placeholder="Company"
+                     required/>
+              <p class="help-block" ng-show="partner-form.Pharmacy_Name.$error.required && vm.submitted">
+                A Pharmacy name is required
+              </p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Email.$valid && vm.submitted,
+                                                'has-error': partner-form.Pharmacy_Email.$invalid && vm.submitted }">
+              <input type="text"
+                     name="Pharmacy_Email"
+                     class="form-control custom-input2"
+                     ng-model="vm.main.pharmacy_Email"
+                     placeholder="Email"
+                     required/>
+              <p class="help-block" ng-show="partner-form.Pharmacy_Email.$error.required && vm.submitted">
+                A Pharmacy email is required
+              </p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Phone.$valid && vm.submitted,
+                                                'has-error': partner-form.Pharmacy_Phone.$invalid && vm.submitted }">
+              <input type="text"
+                     name="Pharmacy_Phone"
+                     class="form-control custom-input2"
+                     ng-model="vm.main.pharmacy_Phone"
+                     placeholder="Phone"
+                     required/>
+              <p class="help-block" ng-show="partner-form.Pharmacy_Phone.$error.required && vm.submitted">
+                A Pharmacy Phone number is required
+              </p>
+            </div>
+            <button type="submit" class="btn-pharmeo">Partner with us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+<!--
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -25,3 +151,4 @@
     </p>
   </form>
 </div>
+ -->

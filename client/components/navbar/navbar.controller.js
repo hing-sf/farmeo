@@ -7,6 +7,8 @@ class NavbarController {
     'state': 'main'
   }];
 
+  base_url = window.location.origin;
+
   isCollapsed = true;
   //end-non-standard
 
@@ -16,6 +18,10 @@ class NavbarController {
     this.getCurrentUser = Auth.getCurrentUser;
   }
 }
+
+
+
+
 
 angular.module('pharmeoApp')
   .controller('NavbarController', NavbarController);
