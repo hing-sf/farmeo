@@ -6,7 +6,6 @@ $gray: #969696;
 $dk-gray: #676767;
 $dk-blue: #133e60;
 
-
 .btn-hover {
   -webkit-transition: .5s ;
      -moz-transition: .5s ;
@@ -104,14 +103,6 @@ hr {
   }
 
   #main-sec-1 {
-    .container {
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-    .col-md-12 {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
     tr h3 {
       font-size: 17px !important;
     }
@@ -286,7 +277,8 @@ hr {
 
 .btn-pharmeo {
   color: $white;
-  margin: 20px 0 100px 0;
+  margin-top: 20px;
+  margin-bottom: 100px;
   padding: 10px 25px;
   border-radius: 4px;
   font-size: 18px;
@@ -295,7 +287,8 @@ hr {
 }
 
 #main-sec-1 {
-  margin: 30px 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   .panel-default {
     border: none;
   }
@@ -315,7 +308,8 @@ hr {
 }
 
 #main-sec-2 {
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
   h1 {
     font-weight: 300;
@@ -348,10 +342,11 @@ hr {
 }
 
 #main-sec-4 {
-  margin: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
   color: $dk-gray;
-  b {
+  span {
     font-weight: 400;
   }
 }
