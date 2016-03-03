@@ -8,15 +8,10 @@ class SignupController {
   //end-non-standard
 
   // dependencie injection here
-  constructor($scope, Auth, $state, FileUploader) {
+  constructor($scope, Auth, $state) {
     this.Auth = Auth;
     this.$state = $state;
-    this.uploader = $scope.uploader = new FileUploader({
-        url: './upload/'
-    });
   }
-
-
 
   register(form) {
     this.submitted = true;

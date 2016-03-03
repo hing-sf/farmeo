@@ -19,6 +19,7 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
+// import multer from 'multer';
 var mongoStore = connectMongo(session);
 
 export default function(app) {
@@ -28,6 +29,7 @@ export default function(app) {
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
   app.use(compression());
+  // app.use(multer({dest: './uploads/'}));
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(methodOverride());
