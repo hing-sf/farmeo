@@ -149,26 +149,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-5">
-          <div class="form-group">
-             <label for="file_upload">File input</label>
 
-              <input type="file" nv-file-select uploader="vm.uploader" autoUpload="true"/><br/>
-              <ul>
-                  <li ng-repeat="item in uploader.queue">
-                      Name: <span ng-bind="item.file.name"></span><br/>
-                      <button ng-click="item.upload()">upload</button>
-                  </li>
-              </ul>
-
-
-    <!--          <input type="file"
-                    ng-model="addPharmacy.pharmacy_file"
-                    id="pharmacy_file_upload"> -->
-           </div>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-12">
           <div class="checkbox">
