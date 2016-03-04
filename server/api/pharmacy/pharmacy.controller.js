@@ -1,16 +1,16 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
- * GET     /api/pharmacy_files              ->  index
- * POST    /api/pharmacy_files              ->  create
- * GET     /api/pharmacy_files/:id          ->  show
- * PUT     /api/pharmacy_files/:id          ->  update
- * DELETE  /api/pharmacy_files/:id          ->  destroy
+ * GET     /api/pharmacys              ->  index
+ * POST    /api/pharmacys              ->  create
+ * GET     /api/pharmacys/:id          ->  show
+ * PUT     /api/pharmacys/:id          ->  update
+ * DELETE  /api/pharmacys/:id          ->  destroy
  */
 
 'use strict';
 
 import _ from 'lodash';
-import PharmacyFiles from './pharmacy_files.model';
+import Pharmacy from './pharmacy.model';
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
@@ -59,43 +59,51 @@ function handleError(res, statusCode) {
   };
 }
 
-// Gets a list of PharmacyFiless
+// Gets a list of Pharmacys
 export function index(req, res) {
-  PharmacyFiles.findAsync()
+  Pharmacy.findAsync()
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Gets a single PharmacyFiles from the DB
+// Gets a single Pharmacy from the DB
 export function show(req, res) {
-  PharmacyFiles.findByIdAsync(req.params.id)
+  Pharmacy.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Creates a new PharmacyFiles in the DB
+// Creates a new Pharmacy in the DB
 export function create(req, res) {
-  PharmacyFiles.createAsync(req.body)
+  Pharmacy.createAsync(req.body)
     .then(respondWithResult(res, 201))
     .catch(handleError(res));
 }
 
-// Updates an existing PharmacyFiles in the DB
+// app.post('/api/upload',upload.single("userdoc"),function(req,res,next){
+//   var userdoc = req.file;
+//   console.log(userdoc);
+//   console.log(req.body);
+//   console.log('REACHED SERVER')
+//   res.status(204).end();
+// });
+
+// Updates an existing Pharmacy in the DB
 export function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  PharmacyFiles.findByIdAsync(req.params.id)
+  Pharmacy.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Deletes a PharmacyFiles from the DB
+// Deletes a Pharmacy from the DB
 export function destroy(req, res) {
-  PharmacyFiles.findByIdAsync(req.params.id)
+  Pharmacy.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(removeEntity(res))
     .catch(handleError(res));

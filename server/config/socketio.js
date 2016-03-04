@@ -17,7 +17,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
-  require('../api/pharmacy_files/pharmacy_files.socket').register(socket);
+  require('../api/pharmacy/pharmacy.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 
 }

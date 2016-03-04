@@ -4,7 +4,7 @@
 
 'use strict';
 
-var PharmacyFilesEvents = require('./pharmacy_files.events');
+var PharmacyEvents = require('./pharmacy.events');
 
 // Model events to emit
 var events = ['save', 'remove'];
@@ -13,9 +13,9 @@ export function register(socket) {
   // Bind model events to socket events
   for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
     var event = events[i];
-    var listener = createListener('pharmacyFiles:' + event, socket);
+    var listener = createListener('pharmacy:' + event, socket);
 
-    PharmacyFilesEvents.on(event, listener);
+    PharmacyEvents.on(event, listener);
     socket.on('disconnect', removeListener(event, listener));
   }
 }
@@ -29,6 +29,6 @@ function createListener(event, socket) {
 
 function removeListener(event, listener) {
   return function() {
-    PharmacyFilesEvents.removeListener(event, listener);
+    PharmacyEvents.removeListener(event, listener);
   };
 }
