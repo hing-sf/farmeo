@@ -19,7 +19,7 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
-// import multer from 'multer';
+import multer from 'multer'; // UPLOAD
 var mongoStore = connectMongo(session);
 
 export default function(app) {
@@ -29,12 +29,12 @@ export default function(app) {
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
   app.use(compression());
-  // app.use(multer({dest: './uploads/'}));
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
   app.use(passport.initialize());
+
 
   // Persist sessions with mongoStore / sequelizeStore
   // We need to enable sessions for passport-twitter because it's an
@@ -67,6 +67,21 @@ export default function(app) {
       xssProtection: true
     }));
   }
+
+  // ======= Didiler Codementor ==================
+  //  if('test' !== env) {
+  //   app.use(lusca({
+  //     csrf: false,
+  //     xframe: 'SAMEORIGIN',
+  //     hsts: {
+  //       maxAge: 31536000, //1 year, in seconds
+  //       includeSubDomains: true,
+  //       preload: true
+  //     },
+  //     xssProtection: true
+  //   }));
+  // }
+  // ==================================
 
   app.set('appPath', path.join(config.root, 'client'));
 

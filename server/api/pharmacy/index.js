@@ -1,7 +1,8 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./pharmacy_files.controller');
+var multer = require('multer');
+var controller = require('./pharmacy.controller');
 
 var router = express.Router();
 

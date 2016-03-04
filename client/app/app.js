@@ -10,10 +10,8 @@ angular.module('pharmeoApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
-  // 'multipartForm'
-  // 'fileModel'
-  // 'flow'
+  'validation.match',
+  'flow'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
@@ -21,3 +19,5 @@ angular.module('pharmeoApp', [
 
     $locationProvider.html5Mode(true);
   });
+
+
