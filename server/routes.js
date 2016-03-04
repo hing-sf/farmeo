@@ -10,21 +10,18 @@ import multer from 'multer';
 import express from 'express';
 var app = express();
 
-
-
 export default function(app) {
   var upload = multer({dest: './uploads/'});
   var type = upload.single('file');
   // Insert routes below
-  // app.use('/api/pharmacys', require('./api/pharmacy'));
+  app.use('/api/pharmacys', type, require('./api/pharmacy'));
   // app.use('/api/pharmacys', upload.single('avatar'), require('./api/pharmacy'));
-  app.post('/api/upload', type, function (req,res,next) {
-  // app.post('/api/upload', upload.single('avatar'), function (req, res, next) {
+  // app.post('/api/upload', type, function (req,res,next) {
+  //   console.log('REACHED SERVER');
+  //   console.log(req.file);
+  //   req.body will hold the text fields, if there were any
+  // });
 
-    console.log('REACHED SERVER');
-    console.log(req.file);
-    // req.body will hold the text fields, if there were any
-  });
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 

@@ -4,7 +4,7 @@ var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
 var ThingSchema = new mongoose.Schema({
   name: String,
-  info: String,
+  title: String,
   active: Boolean
 });
 

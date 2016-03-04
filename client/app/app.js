@@ -19,3 +19,5 @@ angular.module('pharmeoApp', [
 
     $locationProvider.html5Mode(true);
   });
+
+

@@ -81,14 +81,6 @@ export function create(req, res) {
     .catch(handleError(res));
 }
 
-// app.post('/api/upload',upload.single("userdoc"),function(req,res,next){
-//   var userdoc = req.file;
-//   console.log(userdoc);
-//   console.log(req.body);
-//   console.log('REACHED SERVER')
-//   res.status(204).end();
-// });
-
 // Updates an existing Pharmacy in the DB
 export function update(req, res) {
   if (req.body._id) {

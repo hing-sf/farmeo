@@ -45,7 +45,10 @@ class MainController {
 
   addThing() {
     if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
+      this.$http.post('/api/things', {
+        name: this.newThing ,
+        title: this.newTitle
+      });
       this.newThing = '';
     }
   }

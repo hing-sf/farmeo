@@ -3,8 +3,9 @@
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
 var PharmacySchema = new mongoose.Schema({
-  name: String,
-  info: String,
+  filename: String,
+  originalname: String,
+  currentUser: String,
   active: Boolean
 });
 
