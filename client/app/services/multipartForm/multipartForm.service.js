@@ -13,9 +13,6 @@ angular.module('pharmeoApp')
     }
   }]);
 
-
-
-
   // .factory("fileReader", ["$q", "$log", function ($q,$log) {
   //     var onLoad = function(reader, deferred, scope) {
   //         return function () {
