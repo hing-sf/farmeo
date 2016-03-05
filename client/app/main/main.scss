@@ -189,17 +189,26 @@ hr {
   background-color: transparent;
   border-color: transparent;
   font-size: 18px;
-  .navbar-brand {
+  .navbar-brand{
+    margin-top: 11px !important;
     padding: 10px 15px;
   }
   .navbar-nav > li > a {
-    color: $white;
+    color: $pharmeo-blue;
     padding-top: 23px;
   }
   .navbar-text {
     color: $white;
     padding-top: 5px;
   }
+}
+
+.nav-text {
+  color: $pharmeo-blue;
+}
+
+.nav-color {
+  color: $white !important;
 }
 
 .pharmacy-signup-page {
@@ -392,3 +401,62 @@ hr {
     padding:10px 30px;
   }
 }
+
+.signup-form {
+  text-align: center;
+  border: solid 1px $lt-gray;
+  .title-banner {
+    background-color: $pharmeo-blue;
+    h2 {
+      color: $white;
+      padding: 20px 0;
+      font-weight: 100;
+    }
+  }
+  form {
+    margin-top: 40px;
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+  .checkbox {
+    margin: 30px 0;
+  }
+  .custom-input-50 {
+    height: 50px;
+    font-size: 17px;
+  }
+  .btn-100w {
+    width:100%;
+  }
+}
+
+.have-acct {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

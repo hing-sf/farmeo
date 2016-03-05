@@ -7,24 +7,50 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{nav.base_url}}"><img src="/assets/logo/pharmeo-Logo_white.png" alt="Pharmeo Logo" width='100'></a>
+      <a class="navbar-brand" href="{{nav.base_url}}">
+        <span ng-if="homepage">
+          <img src="/assets/logo/pharmeo-Logo-white.png" alt="Pharmeo Logo" width='100'>
+        </span>
+        <span ng-if="!homepage">
+          <img src="/assets/logo/pharmeo-Logo-blue.png" alt="Pharmeo Logo" width='100'>
+        </span>
+      </a>
     </div>
     <div collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <!-- <a ui-sref="{{item.state}}">{{item.title}}</a> -->
+<!--       <ul class="nav navbar-nav">
+        <li ng-repeat="item in nav.menu">
+            <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
-        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
-      </ul>
+        <li ng-show="nav.isAdmin()">
+          <a ui-sref="admin" ng-class="{'nav-color': homepage}">Admin</a>
+        </li>
+      </ul> -->
 
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().first_name }}</p> </li>
-        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="pharmacy-profile">Profile</a></li>
-        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="file-upload">File Upload</a></li>
-        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings">Setting</a></li>
-        <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+      <ul class="nav navbar-nav navbar-right nav-color">
+        <li ng-hide="nav.isLoggedIn()">
+          <a ui-sref="signup" class="nav-text" ng-class="{'nav-color': homepage}">Sign up</a>
+        </li>
+        <li ng-hide="nav.isLoggedIn()">
+          <a ui-sref="login" class="nav-text" ng-class="{'nav-color': homepage}">Login</a>
+        </li>
+      <!--   <li ng-show="nav.isLoggedIn()">
+          <p class="nav-text" ng-class="{'nav-color': homepage}">Hello {{ nav.getCurrentUser().first_name }}</p>
+        </li> -->
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="pharmacy-profile" class="nav-text" ng-class="{'nav-color': homepage}">Profile</a>
+        </li>
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="file-upload" class="nav-text" ng-class="{'nav-color': homepage}">File Upload</a>
+        </li>
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="settings" class="nav-text" ng-class='{"nav-color": homepage}'>Setting</a>
+        </li>
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="logout" class="nav-text" ng-class="{'nav-color': homepage}">Logout</a>
+        </li>
+        <li>
+          <a ui-sref="help" class="nav-text" ng-class='{"nav-color": homepage}'>Help</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,73 +1,55 @@
-<div class="container signup-page">
-  <section class="signup-form">
-    <div class="title-banner">
-      <h2>Let's create your pharmacy account</h2>
+<div class="container pharmacy-signup-page">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Create a FREE account for your Pharmacy</h2>
     </div>
+  </div>
+  <section class="pharmacy-form">
     <form class="form" name="form" ng-submit="vm.register(form)" novalidate>
       <div class="row">
-        <h2>Type in your admin profile</h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-6">
           <div class="form-group" ng-class="{ 'has-success': form.first_name.$valid && vm.submitted,
                                               'has-error': form.first_name.$invalid && vm.submitted }">
+            <label>Name *</label>
             <input type="text"
                    name="first_name"
-                   class="form-control custom-input-50"
+                   class="form-control custom-input"
                    ng-model="vm.user.first_name"
-                   placeholder="First Name"
-                   required/>
+                  required/>
             <p class="help-block" ng-show="form.first_name.$error.required && vm.submitted">
               A First Name is required
             </p>
           </div>
+          <small>First Name</small>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-6">
           <div class="form-group" ng-class="{ 'has-success': form.last_name.$valid && vm.submitted,
                                               'has-error': form.last_name.$invalid && vm.submitted }">
+            <label></label>
             <input type="text"
                    name="last_name"
-                   class="form-control custom-input-50"
+                   class="form-control custom-input ln-input"
                    ng-model="vm.user.last_name"
-                   placeholder="Last Name"
                    required/>
             <p class="help-block" ng-show="form.last_name.$error.required && vm.submitted">
               A Last Name is required
             </p>
           </div>
+          <small>Last Name</small>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
-          <div class="form-group" ng-class="{ 'has-success': form.Pharmacy_Contact.$valid && vm.submitted,
-                                              'has-error': form.Pharmacy_Contact.$invalid && vm.submitted }">
-            <input type="number"
-                   name="Pharmacy_Contact"
-                   class="form-control custom-input-50"
-                   ng-model="vm.user.pharmacy_contact"
-                   placeholder="Phone"
-                   />
-            <p class="help-block" ng-show="form.Pharmacy_Contact.$error.required && vm.submitted">
-              A phone number is required
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-12">
           <div class="form-group" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
                                               'has-error': form.email.$invalid && vm.submitted }">
+            <label>Email</label>
+
             <input type="email"
                    name="email"
-                   class="form-control custom-input-50"
-                   ng-model="vm.user.workemail"
+                   class="form-control custom-input"
+                   ng-model="vm.user.email"
                    required
-                   placeholder="Work Email"
-                   mongoose-error
-                   required
-                   />
+                   mongoose-error/>
             <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
               Doesn't look like a valid email.
             </p>
@@ -80,19 +62,20 @@
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-6">
           <div class="form-group" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                               'has-error': form.password.$invalid && vm.submitted }">
+            <label>Password</label>
+
             <input type="password"
                    name="password"
-                   class="form-control custom-input-50"
+                   class="form-control custom-input"
                    ng-model="vm.user.password"
                    ng-minlength="3"
                    required
-                   placeholder="Password"
-                   mongoose-error
-                   required/>
+                   mongoose-error/>
             <p class="help-block"
                ng-show="(form.password.$error.minlength || form.password.$error.required) && vm.submitted">
               Password must be at least 3 characters.
@@ -102,18 +85,16 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-6">
           <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                               'has-error': form.confirmPassword.$invalid && vm.submitted }">
+            <label>Confirm Password</label>
             <input type="password"
                    name="confirmPassword"
-                   class="form-control custom-input-50"
+                   class="form-control custom-input"
                    ng-model="vm.user.confirmPassword"
                    match="vm.user.password"
                    ng-minlength="3"
-                   placeholder="Retype Password"
                    required/>
             <p class="help-block"
                ng-show="form.confirmPassword.$error.match && vm.submitted">
@@ -123,26 +104,71 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-md-12">
+          <div class="form-group" ng-class="{ 'has-success': form.Pharmacy_Name.$valid && vm.submitted,
+                                              'has-error': form.Pharmacy_Name.$invalid && vm.submitted }">
+            <label>Pharmacy Name *</label>
+            <input type="text"
+                   name="Pharmacy_Name"
+                   class="form-control custom-input"
+                   ng-model="vm.user.pharmacy_name"
+                   required/>
+            <p class="help-block" ng-show="form.Pharmacy_Name.$error.required && vm.submitted">
+              A Pharmacy name is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group" ng-class="{ 'has-success': form.Pharmacy_Zip.$valid && vm.submitted,
+                                              'has-error': form.Pharmacy_Zip.$invalid && vm.submitted }">
+            <label>Pharmacy Zip *</label>
+            <input type="number"
+                   name="Pharmacy_Zip"
+                   class="form-control custom-input"
+                   ng-model="vm.user.pharmacy_zip"/>
+            <p class="help-block" ng-show="form.Pharmacy_Zip.$error.required && vm.submitted">
+              A zip code is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group" ng-class="{ 'has-success': form.Pharmacy_Contact.$valid && vm.submitted,
+                                              'has-error': form.Pharmacy_Contact.$invalid && vm.submitted }">
+            <label>Pharmacy Contact *</label>
+            <input type="number"
+                   name="Pharmacy_Contact"
+                   class="form-control custom-input"
+                   ng-model="vm.user.pharmacy_contact"/>
+            <p class="help-block" ng-show="form.Pharmacy_Contact.$error.required && vm.submitted">
+              A phone number is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
           <div class="checkbox">
             <label class="checkbox-text">
-              <input type="checkbox" required/><p>I agree with Pharmeo's Term & Privacy policy</p>
+              <input type="checkbox"> I'm interested in signing up my pharmacy for the Pharmeo platform.
             </label>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
-          <button type="submit" class="btn-pharmeo btn-100w">Sign up</button>
+        <div class="col-md-12">
+          <button type="submit" class="btn-submit">SUBMIT</button>
         </div>
       </div>
     </form>
   </section>
-  <div class="have-acct">
-    <div class="row">
-      <div class="col-sm-offset-3 col-sm-6">
-        <h3>Have a Pharmeo account? <a href="login">Login</a></h3>
-      </div>
-    </div>
-  </div>
 </div>
+
+<!--   <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <oauth-buttons classes="btn-block"></oauth-buttons>
+    </div>
+  </div> -->
