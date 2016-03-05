@@ -1,6 +1,6 @@
 'use strict';
 
-class SignupController {
+class PharmacySignupCtrl {
   //start-non-standard
   user = {};
   errors = {};
@@ -20,9 +20,11 @@ class SignupController {
       this.Auth.createUser({
         first_name: this.user.first_name,
         last_name: this.user.last_name,
-        pharmacy_contact: this.user.pharmacy_contact,
-        workemail: this.user.workemail,
-        password: this.user.password
+        email: this.user.email,
+        password: this.user.password,
+        pharmacy_name: this.user.pharmacy_name,
+        pharmacy_zip: this.user.pharmacy_zip,
+        pharmacy_contact: this.user.pharmacy_contact
       })
       .then(() => {
         // Account created, redirect to home
@@ -43,4 +45,4 @@ class SignupController {
 }
 
 angular.module('pharmeoApp')
-  .controller('SignupController', SignupController);
+  .controller('PharmacySignupCtrl', PharmacySignupCtrl);

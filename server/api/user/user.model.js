@@ -13,6 +13,10 @@ var UserSchema = new Schema({
     type: String,
     lowercase: true
   },
+  workemail: {
+    type: String,
+    lowercase: true
+  },
   role: {
     type: String,
     default: 'user'
@@ -20,8 +24,9 @@ var UserSchema = new Schema({
   password: String,
   pharmacy_name: String,
   pharmacy_zip: String,
+
   pharmacy_contact: String,
-  pharmacy_file: String,
+  // pharmacy_file: String,
   provider: String,
   salt: String,
   facebook: {},

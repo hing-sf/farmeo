@@ -7,21 +7,17 @@ class NavbarController {
     'state': 'main'
   }];
 
-  base_url = window.location.origin;
-
   isCollapsed = true;
   //end-non-standard
 
-  constructor(Auth) {
+  constructor(Auth,$location,$rootScope) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
+
   }
 }
 
-
-
-
-
 angular.module('pharmeoApp')
   .controller('NavbarController', NavbarController);
+  // .run('runBlock', runBlock);
