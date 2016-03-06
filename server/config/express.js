@@ -19,7 +19,7 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
-import multer from 'multer'; // UPLOAD
+import multer from 'multer';
 var mongoStore = connectMongo(session);
 
 export default function(app) {
@@ -67,21 +67,6 @@ export default function(app) {
       xssProtection: true
     }));
   }
-
-  // ======= Didiler Codementor ==================
-  //  if('test' !== env) {
-  //   app.use(lusca({
-  //     csrf: false,
-  //     xframe: 'SAMEORIGIN',
-  //     hsts: {
-  //       maxAge: 31536000, //1 year, in seconds
-  //       includeSubDomains: true,
-  //       preload: true
-  //     },
-  //     xssProtection: true
-  //   }));
-  // }
-  // ==================================
 
   app.set('appPath', path.join(config.root, 'client'));
 
