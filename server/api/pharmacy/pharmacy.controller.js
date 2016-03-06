@@ -77,6 +77,7 @@ export function show(req, res) {
 // Creates a new Pharmacy in the DB
 export function create(req, res) {
   Pharmacy.createAsync(req.body)
+
     .then(respondWithResult(res, 201))
     .catch(handleError(res));
 }

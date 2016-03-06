@@ -11,7 +11,7 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User, $roo
     currentUser = User.get();
   }
 
-  $rootScope.currentUser = currentUser;
+  // $rootScope.currentUser = currentUser;
   var Auth = {
 
     /**
