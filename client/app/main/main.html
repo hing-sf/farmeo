@@ -8,14 +8,14 @@
     </div>
   </div>
 </header>
-<section>
+<section ng-init="main.init()">
   <div id="main-sec-1">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="panel panel-default">
             <table class="table">
-              <tr ng-repeat="item in main.section1">
+              <tr ng-repeat="item in section1">
                 <td>
                   <img src="{{ item.image }}" width="40" alt="search icon">
                 </td>
@@ -31,6 +31,13 @@
     </div>
   </div>
   <hr>
+
+
+
+  <div class="container">
+    <button ng-click="main.opensetup('lg')">MODAL</button>
+  </div>
+
   <div id="main-sec-2">
     <div class="container">
       <div class="row">
@@ -129,8 +136,8 @@
   </div>
 </section>
 
-<!--
 
+<!--
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -145,12 +152,9 @@
     <label>Syncs in realtime across clients</label>
     <p class="input-group">
       <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="main.newThing">
-      <input type="text" class="form-control" placeholder="Add a new title here." ng-model="main.newTitle">
       <span class="input-group-btn">
         <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
       </span>
     </p>
   </form>
-</div>
-
- -->
+</div> -->

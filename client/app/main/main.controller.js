@@ -1,65 +1,137 @@
 'use strict';
 
-(function() {
+ angular.module('pharmeoApp')
+   .controller('MainController', function ($http, $scope, socket, $uibModal, $log) {
+    // init(){
 
-class MainController {
-  section1 = [
-    {
-    image: '/assets/icons/home.icon1.svg',
-    title: 'Find your company best health plan',
-    message: 'We compare many factors including drug, manufactures and pharmacies to find your company the most cost-effective prescriptions.'
-    },
-    {
-    image: '/assets/icons/home.icon2.svg',
-    title: 'Switching over is fast and easy',
-    message: 'We have the same plans with the lower prescription prices. Leave the hard work to us.'
-    },
-    {
-    image: '/assets/icons/home.icon3.svg',
-    title: 'Access pharmacists anytime',
-    message: "On-call experts ensure you'll always have the answers you need for your prescriptions."
-    },
-    {
-    image: '/assets/icons/home.icon4.svg',
-    title: 'Free prescription delivery',
-    message: 'We deliver directly to employees fast.'
-    }
-  ];
+    // };
 
-  constructor($http, $scope, socket) {
-    this.$http = $http;
-    this.$scope = $scope;
-    this.awesomeThings = [];
+    $scope.section1 = [
+      {
+      image: '/assets/icons/home.icon1.svg',
+      title: 'Find your company best health plan',
+      message: 'We compare many factors including drug, manufactures and pharmacies to find your company the most cost-effective prescriptions.'
+      },
+      {
+      image: '/assets/icons/home.icon2.svg',
+      title: 'Switching over is fast and easy',
+      message: 'We have the same plans with the lower prescription prices. Leave the hard work to us.'
+      },
+      {
+      image: '/assets/icons/home.icon3.svg',
+      title: 'Access pharmacists anytime',
+      message: "On-call experts ensure you'll always have the answers you need for your prescriptions."
+      },
+      {
+      image: '/assets/icons/home.icon4.svg',
+      title: 'Free prescription delivery',
+      message: 'We deliver directly to employees fast.'
+      }
+    ];
 
-    $http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-      socket.syncUpdates('thing', this.awesomeThings);
-    });
+    $scope.animationsEnabled = true;
 
-    $scope.$on('$destroy', function() {
-      socket.unsyncUpdates('thing');
-    });
+    this.opensetup = function (size) {
+      var modalInstance = $uibModal.open({
+        animation: $scope.animationsEnabled,
+        templateUrl: 'app/partials/account-setup/account-setup.html',
+        controller: 'AccountSetupCtrl',
+        size: size,
+        resolve: {
 
-  }
-
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', {
-        name: this.newThing ,
-        title: this.newTitle
+        }
       });
-      this.newThing = '';
-    }
-  }
 
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
-  }
+      modalInstance.result.then(function () {
+
+      }, function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+
+    $scope.toggleAnimation = function () {
+      $scope.animationsEnabled = !$scope.animationsEnabled;
+    };
 
 
-} // Closing
+    // ORIGINAL TEST DATA
+    // $http.get('/api/things').then(response => {
+    //   this.awesomeThings = response.data;
+    //   socket.syncUpdates('thing', this.awesomeThings);
+    // });
 
-angular.module('pharmeoApp')
-  .controller('MainController', MainController);
+    // $scope.$on('$destroy', function() {
+    //   socket.unsyncUpdates('thing');
+    // });
+  });
 
-})();
+
+
+
+
+   // 'use strict';
+
+   // (function() {
+
+   // class MainController {
+   //   section1 = [
+   //     {
+   //     image: '/assets/icons/home.icon1.svg',
+   //     title: 'Find your company best health plan',
+   //     message: 'We compare many factors including drug, manufactures and pharmacies to find your company the most cost-effective prescriptions.'
+   //     },
+   //     {
+   //     image: '/assets/icons/home.icon2.svg',
+   //     title: 'Switching over is fast and easy',
+   //     message: 'We have the same plans with the lower prescription prices. Leave the hard work to us.'
+   //     },
+   //     {
+   //     image: '/assets/icons/home.icon3.svg',
+   //     title: 'Access pharmacists anytime',
+   //     message: "On-call experts ensure you'll always have the answers you need for your prescriptions."
+   //     },
+   //     {
+   //     image: '/assets/icons/home.icon4.svg',
+   //     title: 'Free prescription delivery',
+   //     message: 'We deliver directly to employees fast.'
+   //     }
+   //   ];
+
+   //   constructor($http, $scope, socket) {
+   //     this.$http = $http;
+   //     this.$scope = $scope;
+   //     this.awesomeThings = [];
+
+   //     $http.get('/api/things').then(response => {
+   //       this.awesomeThings = response.data;
+   //       socket.syncUpdates('thing', this.awesomeThings);
+   //     });
+
+   //     $scope.$on('$destroy', function() {
+   //       socket.unsyncUpdates('thing');
+   //     });
+
+   //   }
+
+   //   addThing() {
+   //     if (this.newThing) {
+   //       this.$http.post('/api/things', {
+   //         name: this.newThing ,
+   //         title: this.newTitle
+   //       });
+   //       this.newThing = '';
+   //     }
+   //   }
+
+   //   deleteThing(thing) {
+   //     this.$http.delete('/api/things/' + thing._id);
+   //   }
+
+
+   // } // Closing
+
+   // angular.module('pharmeoApp')
+   //   .controller('MainController', MainController);
+
+   // })();
+

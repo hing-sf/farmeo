@@ -1,60 +1,37 @@
 'use strict';
 
- angular.module('pharmeoApp')
-   .controller('AccountSetupCtrl', function ($scope, multipartForm, $rootScope) {
-    var currentUser = $rootScope.currentUser._id;
+angular.module('pharmeoApp')
+.controller('AccountSetupCtrl', function ($scope, $uibModalInstance, multipartForm, $rootScope, Auth) {
 
-   	$scope.Submit = function(){
-      var file = $scope.file;
-      file.currentUser = currentUser;
-      console.log(file);
-   		var uploadUrl = '/api/pharmacys';
-   		multipartForm.post(uploadUrl, file);
- 		}
+  $scope.init = function(){
+ 		$rootScope.currentUser = Auth.getCurrentUser()._id;
+  };
 
-     // $scope.animationsEnabled = true;
+  $scope.pharmacy = {};
+  var pharmacyFiles = $scope.pharmacy;
+  $scope.emptyfile = false;
+  $scope.successupload = false;
+	$scope.uploadFiles = function(){
+    pharmacyFiles.currentUser = Auth.getCurrentUser()._id;
+    var uploadUrl = '/api/pharmacys';
+    if(!pharmacyFiles.file){
+    	$scope.emptyfile = true;
+    	$scope.successupload = false;
+    } else {
+    	$scope.emptyfile = false;
+    	multipartForm.post(uploadUrl, pharmacyFiles)
+    	.then(function(res) {
+    		$scope.successupload = true;
+    		$scope.pharmacy.file = '';
+    	});
+    }
+	}
 
-     // $scope.open = function (size) {
+  $scope.ok = function () {
+    $uibModalInstance.close();
+  };
 
-     //   var modalInstance = $uibModal.open({
-     //     animation: $scope.animationsEnabled,
-     //     templateUrl: 'account-setup.html',
-     //     controller: 'ModalInstanceCtrl',
-     //     size: size,
-     //     resolve: {
-     //       items: function () {
-     //         return $scope.items;
-     //       }
-     //     }
-     //   });
-
-     //   modalInstance.result.then(function (selectedItem) {
-     //     $scope.selected = selectedItem;
-     //   }, function () {
-     //     $log.info('Modal dismissed at: ' + new Date());
-     //   });
-     // };
-
-     // $scope.toggleAnimation = function () {
-     //   $scope.animationsEnabled = !$scope.animationsEnabled;
-     // };
-
-  }) //Closing tags
-   // Please note that $uibModalInstance represents a modal window (instance) dependency.
-   // It is not the same as the $uibModal service used above.
-
-   // angular.module('pharmeoApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-   //   $scope.items = items;
-   //   $scope.selected = {
-   //     item: $scope.items[0]
-   //   };
-
-   //   $scope.ok = function () {
-   //     $uibModalInstance.close($scope.selected.item);
-   //   };
-
-   //   $scope.cancel = function () {
-   //     $uibModalInstance.dismiss('cancel');
-   //   };
-   // });
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});

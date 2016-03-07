@@ -1,0 +1,23 @@
+.modal-header {
+	text-align: center;
+}
+
+.modal-body {
+	h3 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	form {
+		margin: 50px 0 0 15%;
+		input {
+			padding:20px 0 30px 0;
+		}
+		.btn-pharmeo {
+			margin: 0 0 30px 0;
+		}
+	}
+	.btn-skip-setup {
+		margin-left:75%;
+	}
+}

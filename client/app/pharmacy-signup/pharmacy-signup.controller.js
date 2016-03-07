@@ -8,9 +8,11 @@ class PharmacySignupCtrl {
   //end-non-standard
 
   // dependencie injection here
-  constructor($scope, Auth, $state) {
+  constructor($scope, Auth, $state, $uibModal, $log) {
     this.Auth = Auth;
     this.$state = $state;
+    this.$uibModal = $uibModal;
+    this.$log = $log;
   }
 
   register(form) {
@@ -29,6 +31,11 @@ class PharmacySignupCtrl {
       .then(() => {
         // Account created, redirect to home
         this.$state.go('main');
+        this.$uibModal.open({
+          templateUrl: 'app/partials/account-setup/account-setup.html',
+          controller: 'AccountSetupCtrl',
+          size: 'lg'
+        });
       })
       .catch(err => {
         err = err.data;
