@@ -77,9 +77,29 @@ export function show(req, res) {
 // Creates a new Pharmacy in the DB
 export function create(req, res) {
   Pharmacy.createAsync(req.body)
+    .then(
+      function(e) {
+        //WithResult(res, 201))
+        var files = req.files;
+        var paths = [];
+        console.log(files);
 
-    .then(respondWithResult(res, 201))
-    .catch(handleError(res));
+        files.forEach(function(file) {
+          var path = file.path;
+          paths.push(path);
+
+          console.log(path);
+        });
+
+        e.file= paths;
+        console.log(e);
+        res.send({success:true});
+
+        return e.saveAsync()
+          .spread(e => {
+            return e;
+          });
+      }).catch(handleError(res));
 }
 
 // Updates an existing Pharmacy in the DB

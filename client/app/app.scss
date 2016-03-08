@@ -20,13 +20,12 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'admin/admin.scss';
-@import 'file-upload/file-upload.scss';
 @import 'main/main.scss';
-@import 'modal/modal.scss';
 @import 'partials/account-setup/account-setup.scss';
-@import 'pharmacy-profile/pharmacy-profile.scss';
+@import 'partials/reset-password/reset-password.scss';
 @import 'pharmacy-signup/pharmacy-signup.scss';
 @import 'pharmacy/pharmacy.scss';
+@import '../components/detail-footer/detail-footer.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';

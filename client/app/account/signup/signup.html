@@ -1,5 +1,5 @@
 <div class="container signup-page">
-  <section class="signup-form">
+  <section class="form-layout">
     <div class="title-banner">
       <h2>Let's create your pharmacy account</h2>
     </div>
@@ -8,7 +8,7 @@
         <h2>Type in your admin profile</h2>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.first_name.$valid && vm.submitted,
                                               'has-error': form.first_name.$invalid && vm.submitted }">
             <input type="text"
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.last_name.$valid && vm.submitted,
                                               'has-error': form.last_name.$invalid && vm.submitted }">
             <input type="text"
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.Pharmacy_Contact.$valid && vm.submitted,
                                               'has-error': form.Pharmacy_Contact.$invalid && vm.submitted }">
             <input type="number"
@@ -56,15 +56,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
                                               'has-error': form.email.$invalid && vm.submitted }">
             <input type="email"
                    name="email"
                    class="form-control custom-input-50"
-                   ng-model="vm.user.workemail"
+                   ng-model="vm.user.email"
                    required
-                   placeholder="Work Email"
+                   placeholder="Email"
                    mongoose-error
                    required
                    />
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                               'has-error': form.password.$invalid && vm.submitted }">
             <input type="password"
@@ -104,7 +104,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                               'has-error': form.confirmPassword.$invalid && vm.submitted }">
             <input type="password"
@@ -123,16 +123,16 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <div class="checkbox">
-            <label class="checkbox-text">
-              <input type="checkbox" required/><p>I agree with Pharmeo's Term & Privacy policy</p>
+            <label>
+              <input type="checkbox" required/><p class="checkbox-text">&nbsp;I agree with Pharmeo's Term & Privacy policy</p>
             </label>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
           <button type="submit" class="btn-pharmeo btn-100w">Sign up</button>
         </div>
       </div>
@@ -140,7 +140,7 @@
   </section>
   <div class="have-acct">
     <div class="row">
-      <div class="col-sm-offset-3 col-sm-6">
+      <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
         <h3>Have a Pharmeo account? <a href="login">Login</a></h3>
       </div>
     </div>
