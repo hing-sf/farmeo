@@ -23,7 +23,7 @@ class SignupController {
         first_name: this.user.first_name,
         last_name: this.user.last_name,
         pharmacy_contact: this.user.pharmacy_contact,
-        workemail: this.user.workemail,
+        email: this.user.email,
         password: this.user.password
       })
       .then(() => {

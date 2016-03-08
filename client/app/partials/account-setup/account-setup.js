@@ -8,4 +8,10 @@ angular.module('pharmeoApp')
         templateUrl: 'app/partials/account-setup/account-setup.html',
         controller: 'AccountSetupCtrl'
       })
+      .state('pharmacy-info', {
+        url: '/pharmacy-info',
+        templateUrl: 'app/partials/account-setup/pharmacy-info.html',
+        controller: 'AccountSetupCtrl',
+        controllerAs: 'vm'
+      })
   });

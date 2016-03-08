@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('pharmeoApp')
-  .controller('PharmacyProfileCtrl', function ($scope) {
+  .controller('ResetPasswordCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

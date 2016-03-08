@@ -1,42 +1,11 @@
-
-footer.footer {
-	background-color: $pharmeo-blue;
-  text-align: left;
-  padding: 30px 0;
-  margin-top: 70px;
-  color: $white;
-  .container {
-  	padding-left: 10%;
-  	padding-right: 10%;
-  }
-  h2:nth-child(1) {
-  	font-weight: normal;
-  }
-  h2:nth-child(2) {
-  	font-weight: 100;
-  }
-  p {
-		font-size: 16px;
-		font-weight: 100;
-		padding-top: 20px;
-		line-height: 1.8;
-		color: $lt-gray;
-  }
-  .footer-contactus{
-  	text-align: left;
-  	margin-top: 77px;
-  	font-weight: 100;
-  	font-size: 22px;
-  	list-style-type: none;
-  	li {
-  		padding-bottom: 10px;
-  	}
-  }
+.footer {
+  margin: 30px;
+  text-align: center;
+  font-size: 15px;
   .copywrite {
-  	margin-top: 50px;
-  	border-top: 1px solid $lt-gray;
-  	span:nth-child(1) {
-  		color: $lt-gray;
-  	}
-	}
+    color: $dk-gray;
+    .footer-term-and-privacy {
+      font-weight: 400;
+    }
+  }
 }

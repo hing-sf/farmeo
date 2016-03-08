@@ -22,7 +22,8 @@ angular.module('pharmeoApp')
     	multipartForm.post(uploadUrl, pharmacyFiles)
     	.then(function(res) {
     		$scope.successupload = true;
-    		$scope.pharmacy.file = '';
+    		$scope.pharmacy = {};
+        document.forms[0].reset();
     	});
     }
 	}

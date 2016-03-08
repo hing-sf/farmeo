@@ -1,0 +1,108 @@
+.sidebar-hover {
+  -webkit-transition: .3s ;
+     -moz-transition: .3s ;
+      -ms-transition: .3s ;
+       -o-transition: .3s ;
+          transition: .3s ;
+  background: $pharmeo-blue;
+}
+
+/*.nav-tri {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: $pharmeo-blue;
+	position: absolute;
+	z-index: 100;
+	left: 269px;
+	transition: 0s;
+	-webkit-transform: rotateY(45deg);
+	-ms-transform: rotateY(45deg);
+	-o-transform: rotateY(45deg);
+	transform: rotateY(45deg);
+}*/
+
+#pharmacy-page {
+	margin-top: 50px;
+	#side-navbar {
+		ul {
+			padding: 0;
+			margin: 0;
+			li {
+				font-size:18px;
+				list-style: none;
+				padding:20px;
+				background: $dk-gray;
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+		.side-prescription-orders {
+			background: $gray;
+			border-bottom: 1px solid $dk-gray;
+		}
+		.side-prescription-orders:hover {
+			@extend .sidebar-hover;
+			/*@extend .nav-tri;*/
+		}
+		.side-completed-orders {
+			background: $gray;
+			border-bottom: 1px solid $dk-gray;
+		}
+		.side-completed-orders:hover {
+			@extend .sidebar-hover;
+			/*@extend .nav-tri;*/
+		}
+		.side-manage-inventory {
+			background: $gray;
+			border-bottom: 1px solid $dk-gray;
+		}
+		.side-manage-inventory:hover {
+			@extend .sidebar-hover;
+			/*@extend .nav-tri;*/
+		}
+		.side-account {
+			background: $gray;
+		}
+		.side-account:hover {
+			@extend .sidebar-hover;
+			/*@extend .nav-tri;*/
+		}
+		.side-logout {
+			padding-top:200px;
+		}
+	}
+		#pharmacy-main {
+			.prescription-title {
+				paddding: 30px 0px 5px 0px;
+			}
+			.title-1 {
+				font-size: 25px;
+				padding-bottom: 30px;
+			}
+			.title-2 {
+				font-size: 21px;
+				padding-top: 10px;
+			}
+			.title-3 {
+				font-size: 17px;
+			}
+			.thumbnail {
+				text-align: center;
+				background: #E4F1F7;
+			}
+			.content-text-1 {
+					font-size: 16px;
+					color: $gray;;
+			}
+			.readytodelivery {
+				padding: 20px 0;
+			}
+
+		}
+	}
+
+
+

@@ -2,8 +2,8 @@ $pharmeo-blue: #1A8DCD;
 $white: #ffffff;
 $black: #000000;
 $lt-gray: #E1E1E1;
-$gray: #969696;
-$dk-gray: #676767;
+$gray: #949494;
+$dk-gray: #4C4C4C;
 $dk-blue: #133e60;
 
 .btn-hover {
@@ -156,6 +156,18 @@ hr {
 
 }
 
+.pharmeo-color {
+  color: $pharmeo-blue;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
 .nopadding {
   padding:0;
   margin:0;
@@ -211,6 +223,29 @@ hr {
   color: $white !important;
 }
 
+.reset-password-page {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .reset-title-banner {
+    color: $pharmeo-blue;
+  }
+  .btn-reset {
+    margin-top: 50px;
+  }
+  .need-acct {
+    margin-top: 50px;
+  }
+}
+
+.login-page {
+  text-align: center;
+  .forgot-password {
+    margin-bottom: 40px;
+  }
+  .need-acct {
+    margin-top: 50px;
+  }
+}
 .pharmacy-signup-page {
   h2 {
     text-align: center;
@@ -402,35 +437,87 @@ hr {
   }
 }
 
-.signup-form {
-  text-align: center;
-  border: solid 1px $lt-gray;
-  .title-banner {
+.homepage-footer {
     background-color: $pharmeo-blue;
-    h2 {
-      color: $white;
-      padding: 20px 0;
+    text-align: left;
+    padding: 30px 0;
+    margin-top: 70px;
+    color: $white;
+    .container {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    h2:nth-child(1) {
+      font-weight: normal;
+    }
+    h2:nth-child(2) {
       font-weight: 100;
     }
-  }
-  form {
-    margin-top: 40px;
-    h2 {
-      margin-bottom: 60px;
+    p {
+      font-size: 16px;
+      font-weight: 100;
+      padding-top: 20px;
+      line-height: 1.8;
+      color: $lt-gray;
     }
-  }
-  .checkbox {
-    margin: 30px 0;
-  }
-  .custom-input-50 {
-    height: 50px;
-    font-size: 17px;
-  }
-  .btn-100w {
-    width:100%;
-  }
+    .footer-contactus{
+      text-align: left;
+      margin-top: 77px;
+      font-weight: 100;
+      font-size: 22px;
+      list-style-type: none;
+      li {
+        padding-bottom: 10px;
+      }
+    }
+    .copywrite {
+      margin-top: 50px;
+      border-top: 1px solid $lt-gray;
+      span:nth-child(1) {
+        color: $lt-gray;
+      }
+    }
 }
 
-.have-acct {
-  text-align: center;
-}
+/*.signup-page {*/
+  .form-layout {
+    text-align: center;
+    border: solid 1px $lt-gray;
+    .title-banner {
+      background-color: $pharmeo-blue;
+      h2 {
+        color: $white;
+        padding: 20px 0;
+        font-weight: 100;
+        margin-top: 0;
+        margin-bottom: 100px;
+        font-size: 28px;
+      }
+    }
+    form {
+      margin-top: 40px;
+      h2 {
+        margin-bottom: 60px;
+        font-size: 28px;
+      }
+    }
+    .checkbox {
+      margin: 30px 0;
+      .checkbox-text {
+        font-size: 17px;
+      }
+    }
+
+    .custom-input-50 {
+      height: 50px;
+      font-size: 17px;
+    }
+    .btn-100w {
+      width:100%;
+    }
+  }
+
+  .have-acct {
+    text-align: center;
+  }
+/*}*/

@@ -7,7 +7,7 @@
       <form>
         <div class="form-group">
           <label for="exampleInputFile">Upload Files</label>
-          <input type="file" id="exampleInputFile" name="file" file-model="pharmacy.file">
+          <input type="file"  multiple id="exampleInputFile" name="file" file-model="pharmacy.file">
         </div>
         <div ng-if="emptyfile">Please select a file</div>
         <button type="submit" class="btn-pharmeo" ng-click="uploadFiles()">Upload file</button>

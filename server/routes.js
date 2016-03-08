@@ -12,7 +12,7 @@ var app = express();
 
 export default function(app) {
   var upload = multer({dest: './uploads/'});
-  var type = upload.single('file');
+  var type = upload.array('file');
   // Insert routes below
   app.use('/api/pharmacys', type, require('./api/pharmacy')); // route to upload pharmacy files
   app.use('/api/things', require('./api/thing'));
