@@ -34,7 +34,7 @@
     this.opensetup = function (size) {
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
-        templateUrl: 'app/partials/account-setup/account-setup.html',
+        templateUrl: 'app/partials/file-upload/file-upload.html',
         controller: 'AccountSetupCtrl',
         size: size,
         resolve: {

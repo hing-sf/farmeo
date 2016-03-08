@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h2 class="modal-title">Account Setup</h2>
+</div>
+<div class="modal-body">
+  <h3>Would you like to upload prescription inventory files to your account</h3>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputFile">Upload Files</label>
+        <input type="file"  multiple id="exampleInputFile" name="file" file-model="pharmacy.file">
+      </div>
+      <div ng-if="emptyfile">Please select a file</div>
+      <button type="submit" class="btn-pharmeo" ng-click="uploadFiles()">Upload file</button>
+      <div ng-show="successupload">Your file has been uploaded successfully</div>
+    </form>
+    <div class="btn-skip-setup">
+      <button ng-if="!successupload" class="btn-pharmeo" type="button" ng-click="ok()">Skip Setup</button>
+      <button ng-if="successupload" class="btn-pharmeo" type="button" ng-click="ok()">Done</button>
+    </div>
+</div>
+
