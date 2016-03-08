@@ -1,0 +1,72 @@
+<div class="container account-setup-page">
+  <section class="form-layout">
+      <h2>Type in your account info to receive payments</h2>
+    <form class="form" name="form" novalidate>
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+          <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
+                                              'has-error': form.name.$invalid && vm.submitted }">
+            <input type="text"
+                   name="text"
+                   class="form-control custom-input-50"
+                   ng-model="vm.pharmacy.name"
+                   placeholder="Pharmacy Name"
+                   required
+                   />
+            <p class="help-block" ng-show="form.name.$error.name && vm.submitted">
+              Please enter a Pharmacy name.
+            </p>
+            <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
+              This field is required.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+          <div class="form-group" ng-class="{ 'has-success': form.bankAcctNo.$valid && vm.submitted,
+                                              'has-error': form.bankAcctNo.$invalid && vm.submitted }">
+            <input type="text"
+                   name="bankAcctNo"
+                   class="form-control custom-input-50"
+                   ng-model="vm.pharmacy.bankAcctNo"
+                   placeholder="Bank Account No."
+                   required
+                   />
+            <p class="help-block"
+               ng-show="(form.bankAcctNo.$error.minlength || form.bankAcctNo.$error.required) && vm.submitted">
+              Please enter your Bank Account Number.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+          <div class="form-group" ng-class="{ 'has-success': form.bankAcctRoute.$valid && vm.submitted,
+                                              'has-error': form.bankAcctRoute.$invalid && vm.submitted }">
+            <input type="text"
+                   name="bankAcctRoute"
+                   class="form-control custom-input-50"
+                   ng-model="vm.pharmacy.bankAcctRoute"
+                   placeholder="Bank Account Route."
+                   required
+                   />
+            <p class="help-block"
+               ng-show="(form.bankAcctRoute.$error.minlength || form.bankAcctRoute.$error.required) && vm.submitted">
+              Please enter your Bank Account Route.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+          <button type="button" class="btn-pharmeo btn-100w" ng-click="pharmacy-setup-3()">Next</button>
+        </div>
+      </div>
+      <div class="skip-now">
+        <h4><a href="skip-bank-acct">Skip for now</a></h4>
+      </div>
+    </form>
+  </section>
+</div>

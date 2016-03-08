@@ -32,8 +32,8 @@ class PharmacySignupCtrl {
         // Account created, redirect to home
         this.$state.go('main');
         this.$uibModal.open({
-          templateUrl: 'app/partials/account-setup/account-setup.html',
-          controller: 'AccountSetupCtrl',
+          templateUrl: 'app/partials/file-upload/file-upload.html',
+          controller: 'FileUploadCtrl',
           size: 'lg'
         });
       })
