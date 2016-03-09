@@ -7,30 +7,22 @@ module.exports = {
   // ip:     process.env.OPENSHIFT_NODEJS_IP ||
   //         process.env.IP ||
   //         undefined,
-
-  // Server port
-  // port:   process.env.OPENSHIFT_NODEJS_PORT ||
-  //         process.env.PORT ||
-  //         8080,
-
-
-  // Server IP
-  ip:     process.env.OPENSHIFT_NODEJS_IP ||
+  ip:     process.env.SSH_AUTH_SOCK ||
           process.env.IP ||
-          'http://104.131.138.143/',
+          undefined,
 
   // Server port
-  port:   process.env.OPENSHIFT_NODEJS_PORT ||
+  port:   process.env.SSH_AUTH_SOCK ||
           process.env.PORT ||
           3000,
-
 
   // MongoDB connection options
   mongo: {
     uri:  process.env.MONGOLAB_URI ||
           process.env.MONGOHQ_URL ||
           process.env.OPENSHIFT_MONGODB_DB_URL +
-          process.env.OPENSHIFT_APP_NAME ||
+          // process.env.OPENSHIFT_APP_NAME ||
+          process.env.SSH_AUTH_SOCK ||
           'mongodb://localhost/pharmeo'
   }
 };
