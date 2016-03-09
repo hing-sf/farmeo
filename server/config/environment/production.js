@@ -6,12 +6,12 @@ module.exports = {
   // Server IP
   ip:     process.env.OPENSHIFT_NODEJS_IP ||
           process.env.IP ||
-          undefined,
+          'http://107.170.235.20:3000',
 
   // Server port
   port:   process.env.OPENSHIFT_NODEJS_PORT ||
           process.env.PORT ||
-          8080,
+          3000,
 
   // MongoDB connection options
   mongo: {
@@ -19,6 +19,14 @@ module.exports = {
           process.env.MONGOHQ_URL ||
           process.env.OPENSHIFT_MONGODB_DB_URL +
           process.env.OPENSHIFT_APP_NAME ||
-          'mongodb://localhost/pharmeo'
+          'mongodb://107.170.235.20:3000/test'
   }
+  // Original codes
+  // mongo: {
+  //   uri:  process.env.MONGOLAB_URI ||
+  //         process.env.MONGOHQ_URL ||
+  //         process.env.OPENSHIFT_MONGODB_DB_URL +
+  //         process.env.OPENSHIFT_APP_NAME ||
+  //         'mongodb://localhost/pharmeo'
+  // }
 };
