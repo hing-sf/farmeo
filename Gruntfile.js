@@ -11,14 +11,14 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically, when needed
   require('jit-grunt')(grunt, {
-    express: 'grunt-express-server/tasks',
-    useminPrepare: 'grunt-usemin/tasks',
-    ngtemplates: 'grunt-angular-templates/tasks',
-    cdnify: 'grunt-google-cdn/tasks',
-    protractor: 'grunt-protractor-runner/tasks',
-    buildcontrol: 'grunt-build-control/tasks',
-    istanbul_check_coverage: 'grunt-mocha-istanbul/task',
-    ngconstant: 'grunt-ng-constant/tasks'
+    express: 'grunt-express-server',
+    useminPrepare: 'grunt-usemin',
+    ngtemplates: 'grunt-angular-templates',
+    cdnify: 'grunt-google-cdn',
+    protractor: 'grunt-protractor-runner',
+    buildcontrol: 'grunt-build-control',
+    istanbul_check_coverage: 'grunt-mocha-istanbul',
+    ngconstant: 'grunt-ng-constant'
   });
 
   // Time how long tasks take. Can help when optimizing build times
