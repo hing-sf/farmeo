@@ -7,31 +7,23 @@
   background: $pharmeo-blue;
 }
 
-/*.nav-tri {
-	display: block;
-	width: 30px;
-	height: 30px;
-	background: $pharmeo-blue;
-	position: absolute;
-	z-index: 100;
-	left: 269px;
-	transition: 0s;
-	-webkit-transform: rotateY(45deg);
-	-ms-transform: rotateY(45deg);
-	-o-transform: rotateY(45deg);
-	transform: rotateY(45deg);
-}*/
-
 #pharmacy-page {
 	margin-top: 50px;
 	#side-navbar {
+		position: fixed;
+		max-width: 250px;
+		padding: 0;
+		margin-top: 50px;
 		ul {
+			background: $dk-gray;
 			padding: 0;
 			margin: 0;
 			li {
 				font-size:18px;
 				list-style: none;
-				padding:20px;
+				padding-top:30px;
+				padding-bottom: 30px;
+				padding-left: 40px;
 				background: $dk-gray;
 				a {
 					color: $white;
@@ -39,9 +31,11 @@
 				}
 			}
 		}
+		.side-target-pharmacy {
+			padding-bottom: 35px;
+		}
 		.side-prescription-orders {
 			background: $gray;
-			border-bottom: 1px solid $dk-gray;
 		}
 		.side-prescription-orders:hover {
 			@extend .sidebar-hover;
@@ -49,6 +43,7 @@
 		}
 		.side-completed-orders {
 			background: $gray;
+			border-top: 2px solid $dk-gray;
 			border-bottom: 1px solid $dk-gray;
 		}
 		.side-completed-orders:hover {
@@ -57,6 +52,7 @@
 		}
 		.side-manage-inventory {
 			background: $gray;
+			/*border-top: 1px solid $dk-gray;*/
 			border-bottom: 1px solid $dk-gray;
 		}
 		.side-manage-inventory:hover {
@@ -73,36 +69,69 @@
 		.side-logout {
 			padding-top:200px;
 		}
-	}
-		#pharmacy-main {
-			.prescription-title {
-				paddding: 30px 0px 5px 0px;
-			}
-			.title-1 {
-				font-size: 25px;
-				padding-bottom: 30px;
-			}
-			.title-2 {
-				font-size: 21px;
-				padding-top: 10px;
-			}
-			.title-3 {
-				font-size: 17px;
-			}
-			.thumbnail {
-				text-align: center;
-				background: #E4F1F7;
-			}
-			.content-text-1 {
-					font-size: 16px;
-					color: $gray;;
-			}
-			.readytodelivery {
-				padding: 20px 0;
-			}
+		}
 
+	}
+
+	#pharmacy-main {
+		margin-top: 50px;
+		margin-left: 250px;
+	}
+	#pharmacy-section-1 {
+		padding: 50px 60px 60px 60px;
+		border: 1px solid $lt-gray;
+		#ready-for-delivery {
+
+		}
+		.title-1 {
+			font-size: 25px;
+			padding-bottom: 30px;
+		}
+		.title-2 {
+			font-size: 21px;
+			padding-top: 10px;
+		}
+		.title-3 {
+			font-size: 17px;
+		}
+		.thumbnail {
+			text-align: center;
+			background: #E4F1F7;
+		}
+		.content-text-1 {
+				font-size: 16px;
+				color: $gray;;
+		}
+		.readytodelivery {
+			padding: 20px 0;
 		}
 	}
 
+	#pharmacy-section-2 {
+		padding: 50px 60px 60px 60px;
+		border-left: 1px solid $lt-gray;
+		border-right: 1px solid $lt-gray;
+		.title-1 {
+			font-size: 25px;
+			padding-bottom: 30px;
+		}
+		.title-2 {
+			font-size: 21px;
+			padding-top: 10px;
+		}
+		.title-3 {
+			font-size: 17px;
+		}
+		.thumbnail {
+			text-align: center;
+		}
+		.content-text-1 {
+				font-size: 16px;
+				color: $gray;;
+		}
+		.readytodelivery {
+			padding: 20px 0;
+		}
+	}
 
 

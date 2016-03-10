@@ -11,7 +11,6 @@
                    class="form-control custom-input-50"
                    ng-model="vm.pharmacy.name"
                    placeholder="Pharmacy Name"
-                   required
                    />
             <p class="help-block" ng-show="form.name.$error.name && vm.submitted">
               Please enter a Pharmacy name.
@@ -31,7 +30,6 @@
                    class="form-control custom-input-50"
                    ng-model="vm.pharmacy.bankAcctNo"
                    placeholder="Bank Account No."
-                   required
                    />
             <p class="help-block"
                ng-show="(form.bankAcctNo.$error.minlength || form.bankAcctNo.$error.required) && vm.submitted">
@@ -49,7 +47,6 @@
                    class="form-control custom-input-50"
                    ng-model="vm.pharmacy.bankAcctRoute"
                    placeholder="Bank Account Route."
-                   required
                    />
             <p class="help-block"
                ng-show="(form.bankAcctRoute.$error.minlength || form.bankAcctRoute.$error.required) && vm.submitted">

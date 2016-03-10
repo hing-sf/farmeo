@@ -1,10 +1,18 @@
-$pharmeo-blue: #1A8DCD;
+$pharmeo-blue: #1D8DCD;
 $white: #ffffff;
 $black: #000000;
 $lt-gray: #E1E1E1;
 $gray: #949494;
-$dk-gray: #4C4C4C;
+$dk-gray: #4d5458;
 $dk-blue: #133e60;
+
+.bg-color {
+  color: #949DA3;
+  opacity: .02;
+
+}
+
+
 
 .btn-hover {
   -webkit-transition: .5s ;
@@ -173,6 +181,10 @@ hr {
   margin:0;
 }
 
+.padding10 {
+  padding: 10px;
+}
+
 .thing-form {
   margin: 20px 0;
 }
@@ -326,6 +338,7 @@ hr {
   padding: 10px 25px;
   border-radius: 4px;
   font-size: 18px;
+  height: 60px;
   background: $pharmeo-blue;
   border-style: none;
 }
