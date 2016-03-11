@@ -1,33 +1,34 @@
+<div class="container">
 
-<!-- Begin Body -->
-<div id="pharmacy-page">
-	<div class="container">
+	<div id="nav-left-side">
+		<nav class="col-md-3" id="side-navbar">
+			<ul class="nav-stacked" id="sidebar">
+				<li class="side-target-pharmacy">
+					<a href="target-pharmacy">Target Pharmacy</a>
+				</li>
+				<li class="side-prescription-orders"><span class="nav-tri"></span>
+					<a href="prescription-orders">Prescription Orders</a>
+				</li>
+				<li class="side-completed-orders">
+					<a href="completed-orders">Completed Orders</a>
+				</li>
+				<li class="side-manage-inventory">
+					<a href="manage-inventory">Manage Inventory</a>
+				</li>
+				<li class="side-account">
+					<a href="account">Account</a>
+				</li>
+				<li class="side-logout">
+					<a href="logout">Logout</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3" id="side-navbar">
-	  		<ul class="nav-stacked" id="sidebar">
-	  			<li class="side-target-pharmacy">
-	  				<a href="target-pharmacy">Target Pharmacy</a>
-	  			</li>
-	  			<li class="side-prescription-orders"><span class="nav-tri"></span>
-	  				<a href="prescription-orders">Prescription Orders</a>
-	  			</li>
-	  			<li class="side-completed-orders">
-	  				<a href="completed-orders">Completed Orders</a>
-	  			</li>
-	  			<li class="side-manage-inventory">
-	  				<a href="manage-inventory">Manage Inventory</a>
-	  			</li>
-	  			<li class="side-account">
-	  				<a href="account">Account</a>
-	  			</li>
-	  			<li class="side-logout">
-	  				<a href="logout">Logout</a>
-	  			</li>
-	  		</ul>
-			</div>
-
 			<section id="pharmacy-main">
-				<div class="col-md-9 nopadding">
+				<div class="col-md-12 nopadding">
 					<div id="pharmacy-section-1">
 						<p id="prescription-title">Prescription Orders</p>
 						<h2 class="title-1 pharmeo-color">Ready for delivery</h2>
@@ -72,68 +73,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-<!--
-<div class="pharmacy-page">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-4">
-				<div class="side-navbar">
-					<nav>
-					  <ul>
-					  	<li class="side-target-pharmacy">
-					  		<a href="target-pharmacy">Target Pharmacy</a>
-					  	</li>
-					  	<li class="side-prescription-orders"><span class="nav-tri"></span>
-					  		<a href="prescription-orders">Prescription Orders</a>
-					  	</li>
-					  	<li class="side-completed-orders">
-					  		<a href="completed-orders">Completed Orders</a>
-					  	</li>
-					  	<li class="side-manage-inventory">
-					  		<a href="manage-inventory">Manage Inventory</a>
-					  	</li>
-					  	<li class="side-account">
-					  		<a href="account">Account</a>
-					  	</li>
-					  	<li class="side-logout">
-					  		<a href="logout">Logout</a>
-					  	</li>
-					  </ul>
-					</nav>
-				</div>
-			</div>
-			<div class="pharmacy-content">
-					<div class="row">
-						<div class="col-xs-6">
-							<p class="prescription-order"><b>Prescription Orders</b></p>
-							<h2 class="page-title">Ready for delivery</h2>
-						</div>
-					</div>
-					<div class="row">
-
-							<div class="order-card" ng-repeat="item in customerOrders">
-								<div class="col-xs-3">
-									<h3 class="title-1">{{ item.first_name }} {{ item.last_name }}</h3>
-									<p class="sub-title-1">{{ item.prescription }}</p>
-									<hr>
-									<p class="content-text-1">Fill by: {{ item.fillby }} </p>
-									<p class="content-text-1">{{ item.doctor }} </p>
-									<p class="content-text-1">Refills remaining: {{ item.refillremaining }}</p>
-									<h3 class="title-1">${{ item.cost }}</h3>
-									<p class="content-text-1 pharmeo-color readytodelivery">{{ item.readybydate }} at {{ item.readybytime}}</p>
-								</div>
-							</div>
-
-					</div>
-
-			</div>
-		</div>
-	</div>
-</div>
- -->
