@@ -1,0 +1,48 @@
+<div class="container">
+	<section id="pharmacy-main">
+		<div class="row">
+			<div class="col-md-12 nopadding">
+				<div id="pharmacy-section-1">
+					<p id="prescription-title">Prescription Orders</p>
+					<h2 class="title-1 pharmeo-color">Ready for delivery</h2>
+					<div class="row" id="ready-for-delivery">
+					  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
+					    <div class="thumbnail">
+					      <div class="caption">
+					        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
+					        <p class="title-3">{{ item.prescription }}</p>
+					        <hr>
+					        <p class="content-text-1">Fill by: {{ item.fillby }} </p>
+					        <p class="content-text-1">{{ item.doctor }} </p>
+					        <p class="content-text-1">Refills remaining: {{ item.refillremaining }}</p>
+					        <h3 class="title-4">${{ item.cost }}</h3>
+					        <p class="pharmeo-color readytodelivery">{{ item.readybydate }} at {{ item.readybytime}}</p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<div id="pharmacy-section-2">
+					<h2 class="title-1">Today,  January 2, 2016 {{  }} </h2>
+					<div class="row" id="today-ready">
+					  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
+					    <div class="thumbnail">
+					      <div class="caption">
+					        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
+					        <p class="title-3">{{ item.prescription }}</p>
+					        <hr>
+					        <p class="content-text-1">Fill by: {{ item.fillby }} </p>
+					        <p class="content-text-1">{{ item.doctor }} </p>
+					        <p class="content-text-1">Refills remaining: {{ item.refillremaining }}</p>
+					        <h3 class="title-4">${{ item.cost }}</h3>
+									<button class="btn-pharmeo">Ready for pick up</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+

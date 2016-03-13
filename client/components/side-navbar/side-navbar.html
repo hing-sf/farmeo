@@ -1,0 +1,98 @@
+<!--
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="./custom.css">
+
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head> -->
+<body>
+	<!--
+	Example taken from http://getbootstrap.com/components/#navbar-default
+	-->
+
+	<div id="wrapper">
+
+	    <!-- Modified navbar: Animating from right to left (off canvas) -->
+	    <nav id="navbar2" class="navbar navbar-default" role="navigation">
+	      <div class="container-fluid">
+	        <!-- Brand and toggle get grouped for better mobile display -->
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Navbar top</a>
+	        </div>
+
+	        <!-- Collect the nav links, forms, and other content for toggling -->
+	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	          <ul class="nav navbar-nav">
+	          	<li ng-click="toggleSidenav()" class="side-target-pharmacy">
+	          		<a>Target Pharmacy</a>
+	          	</li>
+	          	<li class="block side-prescription-orders">
+	          		<a ui-sref="pharmacy.orders">Prescription Orders</a>
+	          	</li>
+	          	<li class="side-completed-orders" >
+	          		<a ui-sref="pharmacy.history">Completed Orders</a>
+	          	</li>
+	          	<li class="side-manage-inventory" >
+	          		<a ui-sref="pharmacy.inventory">Manage Inventory</a>
+	          	</li>
+	          	<li class="side-account" >
+	          		<a ui-sref="pharmacy.account">Account</a>
+	          	</li>
+	          	<li class="side-logout" >
+	          		<a ui-sref="logout">Logout</a>
+	          	</li>
+	          </ul>
+
+	        </div><!-- /.navbar-collapse -->
+	      </div><!-- /.container-fluid -->
+	    </nav>
+
+	    <div class="container">
+	    	{{test}}
+
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" ng-click="sidenav_btn()">Nav toggle</button>
+	        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+			</div>
+	</div><!-- /#wrapper -->
+
+	<script>
+		(function ($) {
+
+		    'use strict';
+
+		    // Toggle classes in body for syncing sliding animation with other elements
+		    $('#bs-example-navbar-collapse-2')
+		        .on('show.bs.collapse', function (e) {
+		            $('body').addClass('menu-slider');
+		        })
+		        .on('shown.bs.collapse', function (e) {
+		            $('body').addClass('in');
+		        })
+		        .on('hide.bs.collapse', function (e) {
+		            $('body').removeClass('menu-slider');
+		        })
+		        .on('hidden.bs.collapse', function (e) {
+		            $('body').removeClass('in');
+		        });
+
+		})(jQuery);
+	</script>
+</body>
+
