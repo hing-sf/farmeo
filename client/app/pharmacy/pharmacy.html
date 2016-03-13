@@ -1,75 +1,32 @@
-<div class="container">
-
-	<div id="nav-left-side">
+<div class="container" id="phamacy-portal">
+	<div class="head-space"></div>
+	<div class="nav-left-side">
 		<nav class="col-md-3" id="side-navbar">
 			<ul class="nav-stacked" id="sidebar">
-				<li class="side-target-pharmacy">
-					<a href="target-pharmacy">Target Pharmacy</a>
+				<li ng-click="toggleSidenav()" class="side-target-pharmacy">
+					<a>Target Pharmacy</a>
 				</li>
-				<li class="side-prescription-orders"><span class="nav-tri"></span>
-					<a href="prescription-orders">Prescription Orders</a>
+				<li class="block side-prescription-orders">
+					<a ui-sref="pharmacy.orders">Prescription Orders</a>
 				</li>
-				<li class="side-completed-orders">
-					<a href="completed-orders">Completed Orders</a>
+				<li class="side-completed-orders" >
+					<a ui-sref="pharmacy.history">Completed Orders</a>
 				</li>
-				<li class="side-manage-inventory">
-					<a href="manage-inventory">Manage Inventory</a>
+				<li class="side-manage-inventory" >
+					<a ui-sref="pharmacy.inventory">Manage Inventory</a>
 				</li>
-				<li class="side-account">
-					<a href="account">Account</a>
+				<li class="side-account" >
+					<a ui-sref="pharmacy.account">Account</a>
 				</li>
-				<li class="side-logout">
-					<a href="logout">Logout</a>
+				<li class="side-logout" >
+					<a ui-sref="logout">Logout</a>
 				</li>
 			</ul>
 		</nav>
 	</div>
-
-	<div class="container-fluid">
-		<div class="row">
-			<section id="pharmacy-main">
-				<div class="col-md-12 nopadding">
-					<div id="pharmacy-section-1">
-						<p id="prescription-title">Prescription Orders</p>
-						<h2 class="title-1 pharmeo-color">Ready for delivery</h2>
-						<div class="row" id="ready-for-delivery">
-						  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
-						    <div class="thumbnail">
-						      <div class="caption">
-						        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
-						        <p class="title-3">{{ item.prescription }}</p>
-						        <hr>
-						        <p class="content-text-1">Fill by: {{ item.fillby }} </p>
-						        <p class="content-text-1">{{ item.doctor }} </p>
-						        <p class="content-text-1">Refills remaining: {{ item.refillremaining }}</p>
-						        <h3 class="title-4">${{ item.cost }}</h3>
-						        <p class="pharmeo-color readytodelivery">{{ item.readybydate }} at {{ item.readybytime}}</p>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-					<div id="pharmacy-section-2">
-						<h2 class="title-1">Today,  January 2, 2016 {{  }} </h2>
-						<div class="row" id="today-ready">
-						  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
-						    <div class="thumbnail">
-						      <div class="caption">
-						        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
-						        <p class="title-3">{{ item.prescription }}</p>
-						        <hr>
-						        <p class="content-text-1">Fill by: {{ item.fillby }} </p>
-						        <p class="content-text-1">{{ item.doctor }} </p>
-						        <p class="content-text-1">Refills remaining: {{ item.refillremaining }}</p>
-						        <h3 class="title-4">${{ item.cost }}</h3>
-										<button class="btn-pharmeo">Ready for pick up</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
 </div>
+
+<ui-view/>
+	<!-- <div ui-view></div> -->
+
+

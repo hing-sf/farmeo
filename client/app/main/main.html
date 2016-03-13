@@ -3,7 +3,7 @@
     <div class="intro-message">
       <h1>World's first prescription marketplace</h1>
       <div class="col-md-12">
-        <button type="submit" ui-sref="signup" class="btn-pharmeo">Get Started</button>
+        <button type="submit" ui-sref="signup" class="btn-pharmeo-45h">Get Started</button>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
         <div class="col-md-12 writing-prescript">
           <h2>Employees typically save $140 per year</h2>
           <p>Pharmeo's recommendations help employees keep more of what they earn.</p>
-          <button type="submit" ui-sref="signup" class="btn-pharmeo">Get Started</button>
+          <button type="submit" ui-sref="signup" class="btn-pharmeo-45h">Get Started</button>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
   <div id="main-sec-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 why-pharmeo">
+        <div class="col-md-12" id="why-pharmeo">
           <h3>Why Pharmeo</h3>
           <img src="/assets/icons/home.icon5.png" width="60" alt="money icons">
           <h2>Cost optimization for employee</h2>
@@ -82,11 +82,11 @@
   <div id="main-sec-6">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 left-message">
+        <div class="col-md-6" id="left-panel">
           <h2>Interested in partnering with us?</h2>
           <h3>We Would love to hear from you about why you think it would be good to partner with us!</h3>
         </div>
-        <div class="col-md-6 right-partner">
+        <div class="col-md-6" id="right-panel">
           <form name="partner-form" ng-submit="partnerWithUs(partner)">
             <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Name.$valid && vm.submitted,
                                                 'has-error': partner-form.Pharmacy_Name.$invalid && vm.submitted }">
@@ -124,7 +124,7 @@
                 A Pharmacy Phone number is required
               </p>
             </div>
-            <button type="submit" class="btn-pharmeo">Partner with us</button>
+            <button type="submit" class="btn-pharmeo-45h">Partner with us</button>
           </form>
         </div>
       </div>

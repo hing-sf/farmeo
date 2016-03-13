@@ -13,10 +13,10 @@ angular.module('pharmeoApp')
       	$scope.footer = false;
       	if(currentUrl === '/' || currentUrl === '/login'){
       		$scope.footer = false;
-      		console.log('footer ' + $scope.footer);
+      		// console.log('footer ' + $scope.footer);
       	} else {
       		$scope.footer = true;
-      		console.log('footer ' + $scope.footer);
+      		// console.log('footer ' + $scope.footer);
       	}
     	}
   	}

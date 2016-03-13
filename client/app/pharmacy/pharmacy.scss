@@ -7,20 +7,74 @@
 }
 
 @media(max-width: 992px){
+		#pharmacy-main {
+			margin-left: 190px !important;
+		}
 
-}
-
-@media(min-width: 768px){
-
+		.nav-left-side li {
+			padding-top:30px !important;
+			padding-bottom: 30px !important;
+			padding-left: 25px !important;
+			font-size: 15px !important;
+			width: 190px !important;
+		}
 }
 
 @media(max-width: 767px){
+	.nav-left-side {
+		display: none;
+	}
 
+	#pharmacy-main {
+		margin-top: 70px;
+		margin-left: 0px !important;
+	}
 }
 
 @media(max-width: 500px){
+	.head-space {
+		display: none !important;
+	}
+	#phamacy-portal {
+		margin-top: 10px !important;
+	}
+
+	#pharmacy-section-1 {
+		padding: 50px 0px 0px 0px !important;
+		text-align: center;
+	}
+
+	#pharmacy-section-2 {
+		padding: 50px 0px 0px 0px !important;
+		text-align: center;
+	}
 
 }
+
+#phamacy-portal {
+	position: relative;
+	margin-top: 60px;
+	background: #fff;
+	/*height: 1000px;*/
+	padding: 0;
+	/*border: 1px solid $lt-gray;*/
+}
+
+.side-nav-btn {
+	display: block;
+	color: $white;
+	padding: 40px 0 40px 40px;
+	font-size:16px;
+	text-decoration: none;
+		&:active {
+			background-color: $gray;
+			color: white;
+		&:hover {
+			background-color: $pharmeo-blue;
+		}
+	}
+}
+
 .sidebar-hover {
   -webkit-transition: .3s ;
      -moz-transition: .3s ;
@@ -30,81 +84,108 @@
   background: $pharmeo-blue;
 }
 
-#nav-left-side {
-	margin-top: 50px;
+.sidebar-active {
+	background: $gray;
+}
+
+.nav-left-side {
+	margin-top: 70px;
+	position: relative;
 	#side-navbar {
-		position: fixed;
-		max-width: 250px;
+		top: 0;
+		left: 0;
 		padding: 0;
-		margin-top: 50px;
 		ul {
-			background: $dk-gray;
-			padding: 0;
+			list-style-type: none;
 			margin: 0;
-			li {
-				font-size:18px;
-				list-style: none;
-				padding-top:30px;
-				padding-bottom: 30px;
-				padding-left: 40px;
-				background: $dk-gray;
-				a {
-					color: $white;
-					text-decoration: none;
+			padding: 0;
+			width: 250px;
+			background-color: $dk-gray;
+			position: fixed;
+			height: 85%;
+			overflow: auto;
+			li a{
+				@extend .side-nav-btn;
+			}
+			.side-target-pharmacy {
+				&:hover {
+					background: transparent !important;
+				}
+			}
+			.side-prescription-orders {
+				background-color: $gray;
+				&:hover {
+					@extend .sidebar-hover;
+				}
+				&:active {
+					@extend .sidebar-active;
+				}
+			}
+			.side-completed-orders {
+				background-color: $gray;
+				border-top: solid 2px $dk-gray;
+				border-bottom: solid 3px $dk-gray;
+				&:hover {
+					@extend .sidebar-hover;
+				}
+				&:active {
+					@extend .sidebar-active;
+				}
+			}
+			.side-manage-inventory {
+				background-color: $gray;
+				&:hover {
+					@extend .sidebar-hover;
+				}
+				&:active {
+					@extend .sidebar-active;
+				}
+			}
+			.side-account {
+				background-color: $gray;
+				border-top: solid 2px $dk-gray;
+				&:hover {
+					@extend .sidebar-hover;
+				}
+				&:active {
+					@extend .sidebar-active;
+				}
+			}
+			.side-logout {
+				padding-top:100%;
+				&:hover {
+					@extend .sidebar-hover;
+				}
+				&:active {
+					@extend .sidebar-active;
 				}
 			}
 		}
-		.side-target-pharmacy {
-			padding-bottom: 35px;
-		}
-		.side-prescription-orders {
-			background: $gray;
-		}
-		.side-prescription-orders:hover {
-			@extend .sidebar-hover;
-		}
-		.side-completed-orders {
-			background: $gray;
-			border-top: 2px solid $dk-gray;
-			border-bottom: 1px solid $dk-gray;
-		}
-		.side-completed-orders:hover {
-			@extend .sidebar-hover;
-		}
-		.side-manage-inventory {
-			background: $gray;
-			border-bottom: 1px solid $dk-gray;
-		}
-		.side-manage-inventory:hover {
-			@extend .sidebar-hover;
-		}
-		.side-account {
-			background: $gray;
-		}
-		.side-account:hover {
-			@extend .sidebar-hover;
-		}
-		.side-logout {
-			padding-top:200px;
-		}
-		}
+	}
+}
 
+	.head-space {
+		height: 70px;
+		width: 100%;
+		background: $white;
+		position: fixed;
+		z-index: 50;
 	}
 
 	#pharmacy-main {
-
-		/*width: 1050px;*/
+		position: relative;
+		z-index: 20;
     min-height: 100%;
-    overflow: scroll;
-		margin-top: 50px;
 		margin-left: 250px;
+		/*max-width: 1000px;*/
+		.container {
+			overflow: scroll;
+		}
 	}
+
 	#pharmacy-section-1 {
 		padding: 50px 60px 60px 60px;
 		border: 1px solid $lt-gray;
-		#ready-for-delivery {
-
-		}
 		.title-1 {
 			font-size: 25px;
 			padding-bottom: 30px;
@@ -155,6 +236,3 @@
 			padding: 20px 0;
 		}
 	}
-
-
-
