@@ -102,7 +102,7 @@
 			width: 250px;
 			background-color: $dk-gray;
 			position: fixed;
-			height: 85%;
+			height: 75%;
 			overflow: auto;
 			li a{
 				@extend .side-nav-btn;
@@ -170,6 +170,7 @@
 		background: $white;
 		position: fixed;
 		z-index: 50;
+		background: $bg-color;
 	}
 
 	#pharmacy-main {
@@ -177,7 +178,8 @@
 		z-index: 20;
     min-height: 100%;
 		margin-left: 250px;
-		/*max-width: 1000px;*/
+		background: $white;
+		margin-bottom: 50px;
 		.container {
 			overflow: scroll;
 		}
@@ -185,7 +187,8 @@
 
 	#pharmacy-section-1 {
 		padding: 50px 60px 60px 60px;
-		border: 1px solid $lt-gray;
+		background: $white;
+
 		.title-1 {
 			font-size: 25px;
 			padding-bottom: 30px;
@@ -212,8 +215,35 @@
 
 	#pharmacy-section-2 {
 		padding: 50px 60px 60px 60px;
-		border-left: 1px solid $lt-gray;
-		border-right: 1px solid $lt-gray;
+		border-top: 1px solid $lt-gray;
+		border-bottom: 1px solid $lt-gray;
+		background: $white;
+		.title-1 {
+			font-size: 25px;
+			padding-bottom: 30px;
+		}
+		.title-2 {
+			font-size: 21px;
+			padding-top: 10px;
+		}
+		.title-3 {
+			font-size: 17px;
+		}
+		.thumbnail {
+			text-align: center;
+		}
+		.content-text-1 {
+				font-size: 16px;
+				color: $gray;;
+		}
+		.readytodelivery {
+			padding: 20px 0;
+		}
+	}
+
+	#pharmacy-section-3 {
+		padding: 50px 60px 60px 60px;
+		background: $white;
 		.title-1 {
 			font-size: 25px;
 			padding-bottom: 30px;

@@ -1,32 +1,33 @@
-<div class="container" id="phamacy-portal">
-	<div class="head-space"></div>
-	<div class="nav-left-side">
-		<nav class="col-md-3" id="side-navbar">
-			<ul class="nav-stacked" id="sidebar">
-				<li ng-click="toggleSidenav()" class="side-target-pharmacy">
-					<a>Target Pharmacy</a>
-				</li>
-				<li class="block side-prescription-orders">
-					<a ui-sref="pharmacy.orders">Prescription Orders</a>
-				</li>
-				<li class="side-completed-orders" >
-					<a ui-sref="pharmacy.history">Completed Orders</a>
-				</li>
-				<li class="side-manage-inventory" >
-					<a ui-sref="pharmacy.inventory">Manage Inventory</a>
-				</li>
-				<li class="side-account" >
-					<a ui-sref="pharmacy.account">Account</a>
-				</li>
-				<li class="side-logout" >
-					<a ui-sref="logout">Logout</a>
-				</li>
-			</ul>
-		</nav>
+<div id="bg-color">
+	<div class="container" id="phamacy-portal">
+		<div class="head-space"></div>
+		<div class="nav-left-side">
+			<nav class="col-md-3" id="side-navbar">
+				<ul class="nav-stacked" id="sidebar">
+					<li ng-click="toggleSidenav()" class="side-target-pharmacy">
+						<a>Target Pharmacy</a>
+					</li>
+					<li class="block side-prescription-orders">
+						<a ui-sref="pharmacy.orders">Prescription Orders</a>
+						<i ></i>
+					</li>
+					<li class="side-completed-orders" >
+						<a ui-sref="pharmacy.history">Completed Orders</a>
+					</li>
+					<li class="side-manage-inventory" >
+						<a ui-sref="pharmacy.inventory">Manage Inventory</a>
+					</li>
+					<li class="side-account" >
+						<a ui-sref="pharmacy.account">Account</a>
+					</li>
+					<li class="side-logout" >
+						<a ui-sref="logout">Logout</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<ui-view/>
 	</div>
 </div>
-
-<ui-view/>
-	<!-- <div ui-view></div> -->
-
-

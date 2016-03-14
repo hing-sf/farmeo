@@ -1,0 +1,43 @@
+<section class="form-layout" ng-controller="PharmacySetupCtrl">
+    <h2>Import your list and prescription pricing</h2>
+  <form class="form" name="form" novalidate>
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+        <div class="form-group question-mark" ng-class="{ 'has-success': form.fileupload.$valid && vm.submitted,
+                                            'has-error': form.fileupload.$invalid && vm.submitted }">
+          <input type="text"
+                 name="fileupload"
+                 class="form-control custom-input-50"
+                 ng-model="vm.pharmacy.fileupload"
+                 placeholder="Import .CSV or .XLS file"
+                 />
+            <img src="./assets/icons/question-circle.png"
+                 width="25"
+                 alt="question mark"
+                 uib-popover-template="dynamicPopover.templateUrl"
+                 popover-title="{{dynamicPopover.title}}"
+                 uib-popover="{{dynamicPopover.content}}"
+                 popover-trigger="mouseenter"
+                 type="button"
+                 popover-placement="right-top"
+                 >
+
+
+
+       <!--    <a uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default" popover-placement="right-top" >
+            <img src="./assets/icons/question-circle.png" width="25" alt="question mark">
+          </a> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+        <button ui-sref="pharmacy-setup.step4" type="button" class="btn-pharmeo btn-100w btn-reset">Finish</button>
+      </div>
+    </div>
+    <div class="skip-now">
+      <h4><a href="skip-bank-acct">Skip for now</a></h4>
+    </div>
+  </form>
+</section>

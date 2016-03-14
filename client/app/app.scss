@@ -21,9 +21,9 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // injector
 @import 'admin/admin.scss';
 @import 'main/main.scss';
-@import 'partials/account-setup/account-setup.scss';
 @import 'partials/file-upload/file-upload.scss';
 @import 'partials/reset-password/reset-password.scss';
+@import 'pharmacy-setup/pharmacy-setup.scss';
 @import 'pharmacy-signup/pharmacy-signup.scss';
 @import 'pharmacy/pharmacy.scss';
 @import '../components/detail-footer/detail-footer.scss';

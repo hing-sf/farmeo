@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: AccountSetupCtrl', function () {
+describe('Controller: PharmacySetupCtrl', function () {
 
   // load the controller's module
   beforeEach(module('pharmeoApp'));
 
-  var AccountSetupCtrl, scope;
+  var PharmacySetupCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AccountSetupCtrl = $controller('AccountSetupCtrl', {
+    PharmacySetupCtrl = $controller('PharmacySetupCtrl', {
       $scope: scope
     });
   }));

@@ -1,7 +1,13 @@
-.account-setup-page {
+#bg-color {
+	background-color: $bg-color;
+}
+.pharmacy-setup-page {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 70px;
 	.form-layout {
+		background-color: $white;
+		margin-bottom: 100px;
+
 		h2 {
 			margin: 50px;
 			font-size:25px;

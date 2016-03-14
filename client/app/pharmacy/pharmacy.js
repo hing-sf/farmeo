@@ -11,25 +11,25 @@ angular.module('pharmeoApp')
         url: '.orders',
         parent: 'pharmacy',
         templateUrl: 'app/pharmacy/orders.html',
-        controller: 'PharmacyCtrl'
+        controller: 'PharmacyCtrl as vm'
       })
       .state('pharmacy.history', {
         url: '.history',
         parent: 'pharmacy',
         templateUrl: 'app/pharmacy/history.html',
-        controller: 'PharmacyCtrl'
+        controller: 'PharmacyCtrl as vm'
       })
       .state('pharmacy.inventory', {
         url: '.inventory',
         parent: 'pharmacy',
         templateUrl: 'app/pharmacy/inventory.html',
-        controller: 'PharmacyCtrl'
+        controller: 'PharmacyCtrl as vm'
       })
       .state('pharmacy.account', {
         url: '.account',
         parent: 'pharmacy',
         templateUrl: 'app/pharmacy/account.html',
-        controller: 'PharmacyCtrl'
+        controller: 'PharmacyCtrl as vm'
       });
 
       $urlRouterProvider
