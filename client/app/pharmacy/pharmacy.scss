@@ -48,16 +48,25 @@
 		padding: 50px 0px 0px 0px !important;
 		text-align: center;
 	}
-
 }
 
 #phamacy-portal {
 	position: relative;
 	margin-top: 60px;
-	background: #fff;
-	/*height: 1000px;*/
+	background: $white;
 	padding: 0;
-	/*border: 1px solid $lt-gray;*/
+}
+
+.title-1 {
+	font-size: 25px;
+	padding-bottom: 30px;
+}
+.title-2 {
+	font-size: 21px;
+	padding-top: 10px;
+}
+.title-3 {
+	font-size: 17px;
 }
 
 .side-nav-btn {
@@ -188,17 +197,7 @@
 	#pharmacy-section-1 {
 		padding: 50px 60px 60px 60px;
 		background: $white;
-		.title-1 {
-			font-size: 25px;
-			padding-bottom: 30px;
-		}
-		.title-2 {
-			font-size: 21px;
-			padding-top: 10px;
-		}
-		.title-3 {
-			font-size: 17px;
-		}
+
 		.thumbnail {
 			text-align: center;
 			background: #E4F1F7;
@@ -282,17 +281,46 @@
 			    top: 2px;
 			}
 		}
+		table td{
+			border-top: none !important;
+		}
+		tbody  {
+			border: solid 1px $lt-gray;
+		}
 	}
 
-
-
-	table td{
-		border-top: none !important;
+	#inventory-management {
+		min-height: 900px;
+		padding: 50px 60px 60px 60px;
+		background: $white;
+		color: $dk-gray;
+		#order-search-input {
+			padding: 50px 60px 60px 60px;
+			background: $white;
+		}
+		form {
+			margin-top: 20px;
+			margin-bottom: 50px;
+			.form-control-feedback {
+			    top: 2px;
+			}
+		}
+		#prescription-details {
+			border: solid 1px $lt-gray;
+			padding: 10px 20px;
+			margin-bottom: 30px;
+		}
 	}
 
-	tbody  {
-		border: solid 1px $lt-gray;
+	#account-detail {
+		min-height: 900px;
+		padding: 50px 60px 60px 60px;
+		background: $white;
+		color: $dk-gray;
+		.account-content {
+			color: $gray;
+			margin-bottom: 30px;
+			font-size: 16px;
+		}
 	}
-
-
 

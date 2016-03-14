@@ -1,9 +1,35 @@
-<div class="row">
-	<div class="col-md-12 nopadding">
-
-
+<div id="inventory-management">
+	<div class="row">
+		<div class="col-md-6">
+			<p id="title-2">Inventory Management</p>
+			<form role="form" class="order-search-input">
+			  <div class="form-group has-feedback has-feedback-left">
+			    <label class="control-label sr-only">Search</label>
+			    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
+			    <i class="form-control-feedback glyphicon glyphicon-search"></i>
+			  </div>
+			</form>
+		</div>
+	</div>
+	<div id="prescription-details" ng-repeat="item in prescriptions">
+		<div class="row">
+			<div class="col-xs-6">
+				<p>{{item.name}}</p>
+			</div>
+			<div class="col-xs-6">
+				<i class="fa fa-trash-o fa-2x pharmeo-color pull-right"></i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<h4>{{item.dose}}</h4>
+			</div>
+			<div class="col-xs-4">
+				<h4>{{item.stock}}</h4>
+			</div>
+			<div class="col-xs-4">
+				<h4 class="pull-right">${{item.price}}</h4>
+			</div>
+		</div>
 	</div>
 </div>
-
-
-
