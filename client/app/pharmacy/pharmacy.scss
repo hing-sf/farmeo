@@ -102,7 +102,7 @@
 			width: 250px;
 			background-color: $dk-gray;
 			position: fixed;
-			height: 75%;
+			height: 78.3%;
 			overflow: auto;
 			li a{
 				@extend .side-nav-btn;
@@ -178,7 +178,7 @@
 		z-index: 20;
     min-height: 100%;
 		margin-left: 250px;
-		background: $white;
+		/*background: $white;*/
 		margin-bottom: 50px;
 		.container {
 			overflow: scroll;
@@ -188,7 +188,6 @@
 	#pharmacy-section-1 {
 		padding: 50px 60px 60px 60px;
 		background: $white;
-
 		.title-1 {
 			font-size: 25px;
 			padding-bottom: 30px;
@@ -266,3 +265,34 @@
 			padding: 20px 0;
 		}
 	}
+
+	#order-history {
+		min-height: 900px;
+		padding: 50px 60px 60px 60px;
+		background: $white;
+		color: $dk-gray;
+		#order-search-input {
+			padding: 50px 60px 60px 60px;
+			background: $white;
+		}
+		form {
+			margin-top: 20px;
+			margin-bottom: 50px;
+			.form-control-feedback {
+			    top: 2px;
+			}
+		}
+	}
+
+
+
+	table td{
+		border-top: none !important;
+	}
+
+	tbody  {
+		border: solid 1px $lt-gray;
+	}
+
+
+

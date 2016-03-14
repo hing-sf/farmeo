@@ -1,12 +1,56 @@
-<section id="pharmacy-main">
+<div id="order-history">
 	<div class="row">
-		<div class="col-md-6 nopadding">
+		<div class="col-md-6">
+			<p id="title-2">Order History</p>
+			<h2 class="title-1">December 2, 2015 {{  }} </h2>
+		</div>
+		<div class="col-md-6">
+			<form role="form" class="order-search-input">
+			  <div class="form-group has-feedback has-feedback-left">
+			    <label class="control-label sr-only">Search</label>
+			    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
+			    <i class="form-control-feedback glyphicon glyphicon-search"></i>
+			  </div>
+			</form>
 
 		</div>
-		<div class="col-md-6 nopadding">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table">
 
+					</table>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Name</th>
+							<th>Rx#</th>
+							<th>Pick up </th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+							<tr ng-repeat="item in orderHistory">
+							<td>{{item.date}}</td>
+							<td>{{item.name}}</td>
+							<td>{{item.number}}</td>
+							<td>{{item.time}}</td>
+							<td>${{item.price}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
 		</div>
 	</div>
-</section>
+</div>
+
+
+
+
+
+
+
 
 

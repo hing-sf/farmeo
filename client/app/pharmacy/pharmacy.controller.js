@@ -6,6 +6,18 @@ angular.module('pharmeoApp')
     $scope.customerOrders = dataService.customerOrders;
     $scope.busIdTypes = dataService.busIdTypes;
 
+    $scope.orderHistory = [
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'},
+        {'date' : '12/16/15','name' : 'John','number' : '8769834','time' : '4:00pm','price' : '25.00'}
+    ]
     // $scope.toggleSidenav = function(){
     // 	console.log('controller')
     // 	$('#bs-example-navbar-collapse-2')
