@@ -1,9 +1,10 @@
-'use strict';
-
 angular.module('pharmeoApp')
-  .directive('navbar', () => ({
-    templateUrl: 'components/navbar/navbar.html',
+.directive('navbar', function(){
+  return {
     restrict: 'E',
-    controller: 'NavbarController',
-    controllerAs: 'nav'
-  }));
+    templateUrl: 'components/navbar/navbar.html',
+    controller: function($scope) {
+
+    }
+  }
+});

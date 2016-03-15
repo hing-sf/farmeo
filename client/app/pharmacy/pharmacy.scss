@@ -11,13 +11,19 @@
 			margin-left: 190px !important;
 		}
 
-		.nav-left-side li {
+		.nav-left-side li a{
 			padding-top:30px !important;
 			padding-bottom: 30px !important;
 			padding-left: 25px !important;
 			font-size: 15px !important;
 			width: 190px !important;
 		}
+
+		.nav-left-side ul{
+			width: 190px !important;
+		}
+
+
 }
 
 @media(max-width: 767px){
@@ -35,18 +41,31 @@
 	.head-space {
 		display: none !important;
 	}
+
 	#phamacy-portal {
 		margin-top: 10px !important;
 	}
 
 	#pharmacy-section-1 {
 		padding: 50px 0px 0px 0px !important;
+		min-height: 500px !important;
 		text-align: center;
 	}
 
 	#pharmacy-section-2 {
 		padding: 50px 0px 0px 0px !important;
+		min-height: 500px !important;
 		text-align: center;
+	}
+
+	#order-history {
+		padding: 50px 0px 0px 0px !important;
+		min-height: 500px !important;
+	}
+
+	#inventory-management {
+		padding: 50px 0px 0px 0px !important;
+		min-height: 500px !important;
 	}
 }
 
@@ -194,86 +213,81 @@
 		}
 	}
 
-	#pharmacy-section-1 {
+	#current-orders {
 		padding: 50px 60px 60px 60px;
 		background: $white;
-
-		.thumbnail {
-			text-align: center;
-			background: #E4F1F7;
+		.col-md-12 {
+			padding: 0;
 		}
-		.content-text-1 {
-				font-size: 16px;
-				color: $gray;;
+		#pharmacy-section-1 {
+			.thumbnail {
+				text-align: center;
+				background: #E4F1F7;
+			}
+			.content-text-1 {
+					font-size: 16px;
+					color: $gray;;
+			}
+			.readytodelivery {
+				padding: 20px 0;
+			}
 		}
-		.readytodelivery {
-			padding: 20px 0;
+		#pharmacy-section-2 {
+			border-top: 1px solid $lt-gray;
+			border-bottom: 1px solid $lt-gray;
+			/*background: $white;*/
+			.title-1 {
+				font-size: 25px;
+				padding-bottom: 30px;
+			}
+			.title-2 {
+				font-size: 21px;
+				padding-top: 10px;
+			}
+			.title-3 {
+				font-size: 17px;
+			}
+			.thumbnail {
+				text-align: center;
+			}
+			.content-text-1 {
+					font-size: 16px;
+					color: $gray;;
+			}
+			.readytodelivery {
+				padding: 20px 0;
+			}
 		}
-	}
-
-	#pharmacy-section-2 {
-		padding: 50px 60px 60px 60px;
-		border-top: 1px solid $lt-gray;
-		border-bottom: 1px solid $lt-gray;
-		background: $white;
-		.title-1 {
-			font-size: 25px;
-			padding-bottom: 30px;
-		}
-		.title-2 {
-			font-size: 21px;
-			padding-top: 10px;
-		}
-		.title-3 {
-			font-size: 17px;
-		}
-		.thumbnail {
-			text-align: center;
-		}
-		.content-text-1 {
-				font-size: 16px;
-				color: $gray;;
-		}
-		.readytodelivery {
-			padding: 20px 0;
-		}
-	}
-
-	#pharmacy-section-3 {
-		padding: 50px 60px 60px 60px;
-		background: $white;
-		.title-1 {
-			font-size: 25px;
-			padding-bottom: 30px;
-		}
-		.title-2 {
-			font-size: 21px;
-			padding-top: 10px;
-		}
-		.title-3 {
-			font-size: 17px;
-		}
-		.thumbnail {
-			text-align: center;
-		}
-		.content-text-1 {
-				font-size: 16px;
-				color: $gray;;
-		}
-		.readytodelivery {
-			padding: 20px 0;
+		#pharmacy-section-3 {
+			.title-1 {
+				font-size: 25px;
+				padding-bottom: 30px;
+			}
+			.title-2 {
+				font-size: 21px;
+				padding-top: 10px;
+			}
+			.title-3 {
+				font-size: 17px;
+			}
+			.thumbnail {
+				text-align: center;
+			}
+			.content-text-1 {
+					font-size: 16px;
+					color: $gray;;
+			}
+			.readytodelivery {
+				padding: 20px 0;
+			}
 		}
 	}
 
 	#order-history {
-		min-height: 900px;
 		padding: 50px 60px 60px 60px;
 		background: $white;
+		min-height: 900px;
 		color: $dk-gray;
-		#order-search-input {
-			padding: 50px 60px 60px 60px;
-			background: $white;
-		}
 		form {
 			margin-top: 20px;
 			margin-bottom: 50px;
@@ -281,23 +295,13 @@
 			    top: 2px;
 			}
 		}
-		table td{
-			border-top: none !important;
-		}
-		tbody  {
-			border: solid 1px $lt-gray;
-		}
 	}
 
 	#inventory-management {
-		min-height: 900px;
 		padding: 50px 60px 60px 60px;
 		background: $white;
+		min-height: 900px;
 		color: $dk-gray;
-		#order-search-input {
-			padding: 50px 60px 60px 60px;
-			background: $white;
-		}
 		form {
 			margin-top: 20px;
 			margin-bottom: 50px;
@@ -313,14 +317,26 @@
 	}
 
 	#account-detail {
-		min-height: 900px;
 		padding: 50px 60px 60px 60px;
 		background: $white;
+		min-height: 900px;
 		color: $dk-gray;
-		.account-content {
-			color: $gray;
-			margin-bottom: 30px;
-			font-size: 16px;
+		#admin-profile {
+			margin: 30px 0;
+			.account-content {
+				color: $gray;
+				margin-bottom: 30px;
+				font-size: 16px;
+			}
 		}
-	}
+		#admin-billing {
+			margin: 30px 0;
+		}
+		#admin-address {
+			margin: 30px 0;
+		}
+		#admin-password {
+			margin: 30px 0;
+		}
 
+	}

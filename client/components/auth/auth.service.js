@@ -2,7 +2,7 @@
 
 (function() {
 
-function AuthService($location, $http, $cookies, $q, appConfig, Util, User, $rootScope) {
+function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
   var safeCb = Util.safeCb;
   var currentUser = {};
   var userRoles = appConfig.userRoles || [];
@@ -11,7 +11,6 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User, $roo
     currentUser = User.get();
   }
 
-  // $rootScope.currentUser = currentUser;
   var Auth = {
 
     /**

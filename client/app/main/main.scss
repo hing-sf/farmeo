@@ -26,7 +26,7 @@ $bg-color: #DCDCDC;
   color: $white;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 5px 25px;
+  padding: 10px 25px;
   border-radius: 3px;
   font-size: 18px;
   background: $pharmeo-blue;
@@ -64,10 +64,6 @@ p {
 
 hr {
   border-top: 1px solid $lt-gray;
-}
-
-.container {
-  padding: 0;
 }
 
 @media(min-width: 1201px){
@@ -180,6 +176,10 @@ hr {
 }
 
 @media(max-width: 500px){
+  .intro-header .intro-message {
+      padding-top: 50% !important;
+      padding-bottom: 0% !important;
+  }
 
 }
 
@@ -282,6 +282,26 @@ hr {
   }
 }
 
+.navbar-toggle {
+    margin-top: 18px;
+    background-color: $pharmeo-blue;
+    border: none;
+    .icon-bar {
+        background-color: $white !important;
+    }
+}
+
+.nav-collapse {
+    background: $lt-gray;
+    width: 106%;
+    margin-left: -15px !important;
+    text-align: center;
+    margin-top: -2%;
+/*  .nav-text {
+    background: $dk-gray;
+    color: $dk-gray !important;
+  }*/
+}
 
 .help-block {
   text-align: left;
@@ -295,10 +315,10 @@ hr {
 /*.nav-color {
   color: $white;
 }*/
-.nav-text {
+/*.nav-text {
  color: $pharmeo-blue;
 }
-
+*/
 .font-white {
   color: $white !important;
 }
@@ -405,12 +425,12 @@ hr {
 }
 
 .btn-pharmeo-60h {
-  height: 60px;
+  padding: 20px 30px;
   @extend .btn-pharmeo;
 }
 
 .btn-pharmeo-45h {
-  height: 45px;
+  padding: 13px 30px;
   margin: 30px 0;
   @extend .btn-pharmeo;
 }

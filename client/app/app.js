@@ -11,7 +11,6 @@ angular.module('pharmeoApp', [
   'ui.router',
   'ui.bootstrap',
   'validation.match'
-  // 'jquery.knob'
 ])
 .run(function($rootScope, $location, $urlRouter, $state, $stateParams, Auth) {
   $rootScope.baseUrl = $location.host(); // global base url

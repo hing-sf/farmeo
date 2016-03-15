@@ -1,14 +1,17 @@
-<div id="inventory-management">
+<div class="row" id="inventory-management">
 	<div class="row">
-		<div class="col-md-6">
-			<p id="title-2">Inventory Management</p>
-			<form role="form" class="order-search-input">
-			  <div class="form-group has-feedback has-feedback-left">
-			    <label class="control-label sr-only">Search</label>
-			    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
-			    <i class="form-control-feedback glyphicon glyphicon-search"></i>
-			  </div>
-			</form>
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<p id="title-2">Inventory Management</p>
+				<form role="form" class="order-search-input">
+				  <div class="form-group has-feedback has-feedback-left">
+				    <label class="control-label sr-only">Search</label>
+				    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
+				    <i class="form-control-feedback glyphicon glyphicon-search"></i>
+				  </div>
+				</form>
+			</div>
+			<div class="col-md-6"></div>
 		</div>
 	</div>
 	<div id="prescription-details" ng-repeat="item in prescriptions">
