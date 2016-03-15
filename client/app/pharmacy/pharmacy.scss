@@ -112,7 +112,7 @@
   background: $pharmeo-blue;
 }
 
-.active {
+.sidenav-active {
 	background: $pharmeo-blue !important;
 	content:"\e072";
 }
@@ -149,7 +149,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .active;
+					@extend .sidenav-active;
 				}
 			}
 			.side-completed-orders {
@@ -160,7 +160,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .active;
+					@extend .sidenav-active;
 				}
 			}
 			.side-manage-inventory {
@@ -169,7 +169,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .active;
+					@extend .sidenav-active;
 				}
 			}
 			.side-account {
@@ -179,7 +179,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .active;
+					@extend .sidenav-active;
 				}
 			}
 			.side-logout {
@@ -188,7 +188,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .active;
+					@extend .sidenav-active;
 				}
 			}
 		}

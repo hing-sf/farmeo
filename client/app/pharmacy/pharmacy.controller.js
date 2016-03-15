@@ -10,10 +10,9 @@ angular.module('pharmeoApp')
     $scope.adminProfile = dataService.adminProfile;
 
     $(function(){
-      $('ul li a').click(function(){
-        $('li a').removeClass("active");
-        $(this).addClass("active");
-        console.log('asf;dj')
+      $('.sidenav-li').click(function(){
+        $('.sidenav-li').removeClass("sidenav-active");
+        $(this).addClass("sidenav-active");
       });
     });
 
