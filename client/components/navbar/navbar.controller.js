@@ -7,8 +7,9 @@ angular.module('pharmeoApp')
 
   // $scope.isCollapsed = true;
   // function NavBarCtrl($scope) {
-  //     $scope.isCollapsed = true;
+      // $scope.isCollapsed = true;
   // }
+
 
 });
 

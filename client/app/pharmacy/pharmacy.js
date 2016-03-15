@@ -6,6 +6,7 @@ angular.module('pharmeoApp')
       .state('pharmacy', {
         url: '/pharmacy',
         templateUrl: 'app/pharmacy/pharmacy.html',
+        controller: 'PharmacyCtrl as vm'
       })
       .state('pharmacy.orders', {
         url: '.orders',

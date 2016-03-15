@@ -112,10 +112,13 @@
   background: $pharmeo-blue;
 }
 
-.sidebar-active {
-	background: $gray;
+.active {
+	background: $pharmeo-blue !important;
+	content:"\e072";
 }
+/*===========================*/
 
+/* =========================*/
 .nav-left-side {
 	margin-top: 70px;
 	position: relative;
@@ -146,7 +149,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .sidebar-active;
+					@extend .active;
 				}
 			}
 			.side-completed-orders {
@@ -157,7 +160,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .sidebar-active;
+					@extend .active;
 				}
 			}
 			.side-manage-inventory {
@@ -166,7 +169,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .sidebar-active;
+					@extend .active;
 				}
 			}
 			.side-account {
@@ -176,7 +179,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .sidebar-active;
+					@extend .active;
 				}
 			}
 			.side-logout {
@@ -185,7 +188,7 @@
 					@extend .sidebar-hover;
 				}
 				&:active {
-					@extend .sidebar-active;
+					@extend .active;
 				}
 			}
 		}

@@ -263,6 +263,8 @@ hr {
   background: #4393B9;
 }
 
+/*======= NAVBAR =====================*/
+
 .navbar-default {
   background: transparent;
   height: 70px;
@@ -302,6 +304,14 @@ hr {
     color: $dk-gray !important;
   }*/
 }
+
+.mobile-nav-bg {
+  background: $dk-gray;
+  text-align: center;
+}
+
+
+/*======== NAVBAR END =======================*/
 
 .help-block {
   text-align: left;
@@ -744,3 +754,5 @@ hr {
   body.menu-slider.in #wrapper {
       right: 30%;
   }
+
+
