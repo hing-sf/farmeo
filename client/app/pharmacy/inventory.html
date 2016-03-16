@@ -1,4 +1,32 @@
-<div class="row" id="inventory-management">
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="contact in model.contacts" ng-include="getTemplate(contact)">
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/ng-template" id="display">
+    <td>{{contact.name}}</td>
+    <td>{{contact.age}}</td>
+    <td>
+        <button class="btn-pharmeo" ng-click="editContact(contact)">Edit</button>
+    </td>
+</script>
+<script type="text/ng-template" id="edit">
+    <td><input type="text" ng-model="model.selected.name" /></td>
+    <td><input type="text" ng-model="model.selected.age" /></td>
+    <td>
+        <button class="btn-pharmeo" ng-click="saveContact($index)">Save</button>
+        <button class="btn-pharmeo"ng-click="reset()">Cancel</button>
+    </td>
+</script>
+
+<!-- <div class="row" id="inventory-management">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="col-md-6">
@@ -11,7 +39,8 @@
 				  </div>
 				</form>
 			</div>
-			<div class="col-md-6"></div>
+			<div class="col-md-6 add-icon"></div>
+			<img ng-src="/assets/icons/add.svg" class="pull-right" width="50" alt="add icon">
 		</div>
 	</div>
 	<div id="prescription-details" ng-repeat="item in prescriptions">
@@ -19,8 +48,9 @@
 			<div class="col-xs-6">
 				<p>{{item.name}}</p>
 			</div>
-			<div class="col-xs-6">
-				<i class="fa fa-trash-o fa-2x pharmeo-color pull-right"></i>
+			<div class="col-xs-6 edit-icons">
+				<img ng-src="/assets/icons/delete.svg" class="delete-icon pull-right" width="15" alt="delete icon">
+				<img ng-src="/assets/icons/edit-blue.svg" type="button" class="edit-icon pull-right" width="40" alt="edit icon">
 			</div>
 		</div>
 		<div class="row">
@@ -36,3 +66,4 @@
 		</div>
 	</div>
 </div>
+ -->

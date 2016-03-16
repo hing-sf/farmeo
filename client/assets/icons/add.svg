@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6 (26304) - http://www.bohemiancoding.com/sketch -->
+    <title>compose</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Employer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Employer:-Employee-Enroll" transform="translate(-850.000000, -650.000000)">
+            <g id="compose" transform="translate(860.000000, 656.000000)">
+                <circle id="bg" fill="#1D8DCD" opacity="0.95" filter="url(#filter-1)" cx="25" cy="25" r="25"></circle>
+                <g id="add-new-group" transform="translate(15.833333, 15.833333)">
+                    <rect id="bounds" x="0" y="0" width="18.3333333" height="18.3333333"></rect>
+                    <g id="shape" transform="translate(9.166667, 9.166667) rotate(-315.000000) translate(-9.166667, -9.166667) translate(2.916667, 2.916667)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square">
+                        <path d="M12.1066263,0.602966678 L0.465234158,11.9671828" id="line"></path>
+                        <path d="M12.3581378,12.212706 L0.141862154,0.287294008" id="line"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

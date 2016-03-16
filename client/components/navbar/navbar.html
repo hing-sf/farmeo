@@ -29,7 +29,14 @@
           <a ui-sref="logout" class="nav-text">Logout</a>
         </li>
         <li>
-          <a ui-sref="help" class="nav-text" ng-class='{"font-white ": homepage}'>Help</a>
+          <a ui-sref="help"
+             class="nav-text"
+             uib-popover-template="dynamicPopover.templateUrl"
+             popover-trigger="mouseenter"
+             type="button"
+             popover-placement="bottom"
+             ng-class='{"font-white": homepage}'>Help
+           </a>
         </li>
       </ul>
     </div>

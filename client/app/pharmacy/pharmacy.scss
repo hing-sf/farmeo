@@ -312,10 +312,18 @@
 			    top: 2px;
 			}
 		}
+		.add-icon {
+			margin-top: 45px;
+		}
 		#prescription-details {
 			border: solid 1px $lt-gray;
 			padding: 10px 20px;
 			margin-bottom: 30px;
+			.edit-icons {
+				.edit-icon {
+					margin-top: -8px;
+				}
+			}
 		}
 	}
 
@@ -342,4 +350,20 @@
 			margin: 30px 0;
 		}
 
+	}
+
+	.edit-in-place span {
+	  cursor: pointer;
+	}
+
+	.edit-in-place input {
+	  display: none;
+	}
+
+	.edit-in-place.active span {
+	  display: none;
+	}
+
+	.edit-in-place.active input {
+	  display: inline-block;
 	}
