@@ -28,12 +28,12 @@ class SignupController {
       })
       .then(() => {
         // Account created, redirect to home
-        this.$state.go('main');
-        this.$uibModal.open({
-          templateUrl: 'app/partials/file-upload/file-upload.html',
-          controller: 'FileUploadCtrl',
-          size: 'lg'
-        });
+        this.$state.go('pharmacy-setup.step1');
+        // this.$uibModal.open({
+        //   templateUrl: 'app/partials/file-upload/file-upload.html',
+        //   controller: 'FileUploadCtrl',
+        //   size: 'lg'
+        // });
 
       })
       .catch(err => {
