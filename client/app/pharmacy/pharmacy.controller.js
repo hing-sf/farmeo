@@ -1,13 +1,15 @@
 'use strict';
 
 angular.module('pharmeoApp')
-  .controller('PharmacyCtrl', function ($scope, CRUDpharmacy, dataService) {
+  .controller('PharmacyCtrl', function (CRUDpharmacy, dataService) {
 
-    $scope.customerOrders = dataService.customerOrders;
-    $scope.busIdTypes = dataService.busIdTypes;
-    $scope.orderHistorys = dataService.orderHistorys;
-    $scope.prescriptions = dataService.prescriptions;
-    $scope.adminProfile = dataService.adminProfile;
+    var vm = this;
+
+    this.customerOrders = dataService.customerOrders;
+    this.busIdTypes = dataService.busIdTypes;
+    this.orderHistorys = dataService.orderHistorys;
+    this.prescriptions = dataService.prescriptions;
+    this.adminProfile = dataService.adminProfile;
 
     $(function(){
       $('.sidenav-li').click(function(){
@@ -16,7 +18,7 @@ angular.module('pharmeoApp')
       });
     });
 
- $scope.model = {
+ this.model = {
       contacts: [{
           id: 1,
           name: "Ben",
@@ -38,23 +40,23 @@ angular.module('pharmeoApp')
   };
 
   // gets the template to ng-include for a table row / item
-  $scope.getTemplate = function (contact) {
-      if (contact.id === $scope.model.selected.id) return 'edit';
+  this.getTemplate = function (contact) {
+      if (contact.id === this.model.selected.id) return 'edit';
       else return 'display';
   };
 
-  $scope.editContact = function (contact) {
-      $scope.model.selected = angular.copy(contact);
+  this.editContact = function (contact) {
+      this.model.selected = angular.copy(contact);
   };
 
-  $scope.saveContact = function (idx) {
+  this.saveContact = function (idx) {
       console.log("Saving contact");
-      $scope.model.contacts[idx] = angular.copy($scope.model.selected);
-      $scope.reset();
+      this.model.contacts[idx] = angular.copy(this.model.selected);
+      this.reset();
   };
 
-  $scope.reset = function () {
-      $scope.model.selected = {};
+  this.reset = function () {
+      this.model.selected = {};
   };
 
     // CRUDpharmacy.query({ id: '56dde3fe9103723153f90a95'}, function(data) {

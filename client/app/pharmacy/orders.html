@@ -4,7 +4,7 @@
 			<p id="title-2">Prescription Orders</p>
 			<h2 class="title-1 pharmeo-color">Ready for delivery</h2>
 			<div class="row" id="ready-for-delivery">
-			  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
+			  <div class="col-sm-6 col-md-4" ng-repeat="item in vm.customerOrders">
 			    <div class="thumbnail">
 			      <div class="caption">
 			        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
@@ -23,7 +23,7 @@
 		<div id="pharmacy-section-2">
 			<h2 class="title-1">Today,  January 2, 2016 {{  }} </h2>
 			<div class="row" id="today-ready">
-			  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
+			  <div class="col-sm-6 col-md-4" ng-repeat="item in vm.customerOrders">
 			    <div class="thumbnail">
 			      <div class="caption">
 			        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>
@@ -47,7 +47,7 @@
 		<div id="pharmacy-section-3">
 			<h2 class="title-1">Tomorrow,  January 3, 2016 {{  }} </h2>
 			<div class="row" id="today-ready">
-			  <div class="col-sm-6 col-md-4" ng-repeat="item in customerOrders">
+			  <div class="col-sm-6 col-md-4" ng-repeat="item in vm.customerOrders">
 			    <div class="thumbnail">
 			      <div class="caption">
 			        <h3 class="title-2">{{ item.first_name }} {{ item.last_name }}</h3>

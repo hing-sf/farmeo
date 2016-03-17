@@ -1,0 +1,40 @@
+<div class="row" id="account-detail">
+	<div class="col-md-6">
+		<a href="javascript:history.back()">
+			<p id="title-2" class="pharmeo-color mb30">
+				<i class="fa fa-angle-left"></i>
+				&nbsp;&nbsp;Back to account
+			</p>
+		</a>
+		<div class="title-1">Admin Profile</div>
+		<form name="form" ng-submit="updatePharmacy()" novalidate>
+			<div ng-repeat="item in vm.adminProfile">
+				<div class="form-group">
+				  <label for="pharmacy_name" class="input-label-md">Pharmacy</label>
+				  <input type="text" class="form-control input-lg" id="pharmacy_name" ng-value="item.pharmacy">
+				</div>
+				<div class="form-group">
+				  <label for="first_name" class="input-label-md">First Name</label>
+				  <input type="text" class="form-control input-lg" id="first_name" ng-value="item.f_name">
+				</div>
+				<div class="form-group">
+				  <label for="last_name" class="input-label-md">Last Name</label>
+				  <input type="text" class="form-control input-lg" id="last_name" ng-value="item.l_name">
+				</div>
+				<div class="form-group">
+				  <label for="pharmacy_email" class="input-label-md">Email</label>
+				  <input type="text" class="form-control input-lg" id="pharmacy_email" ng-value="item.email">
+				</div>
+				<div class="form-group">
+				  <label for="pharmacy_phone" class="input-label-md">Phone</label>
+				  <input type="tel" class="form-control input-lg" id="pharmacy_phone" ng-value="item.phone">
+				</div>
+				<button type="submit" class="btn-pharmeo btn-pharmacy-update btn-lg">Update</button>
+			</div>
+		</form>
+	</div>
+	<div class="col-md-6">
+
+	</div>
+</div>
+

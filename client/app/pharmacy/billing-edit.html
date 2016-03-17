@@ -1,0 +1,52 @@
+<div class="row" id="account-detail">
+	<div class="col-md-6">
+		<a href="javascript:history.back()">
+			<p id="title-2" class="pharmeo-color mb30">
+				<i class="fa fa-angle-left"></i>
+				&nbsp;&nbsp;Back to account
+			</p>
+		</a>
+		<div class="title-1">Billing</div>
+		<form name="form" ng-submit="updatePharmacy()" novalidate>
+			<div ng-repeat="item in vm.adminProfile">
+				<div class="form-group">
+				  <label for="back_acct_type" class="input-label-md">Back Account Type</label>
+				  <input type="text" class="form-control input-lg" id="back_acct_type" ng-value="item.acctType">
+				</div>
+				<div class="form-group">
+				  <label for="back_acct_no" class="input-label-md">Bank Account No.</label>
+				  <input type="number" class="form-control input-lg" id="back_acct_no" ng-value="item.acctNo">
+				</div>
+				<div class="form-group">
+				  <label for="bank_routing_no" class="input-label-md">Bank Rounting No.</label>
+				  <input type="number" class="form-control input-lg" id="bank_routing_no" ng-value="item.acctNo">
+				</div>
+				<div class="form-group">
+				  <label for="address1" class="input-label-md">Addreess 1</label>
+				  <input type="text" class="form-control input-lg" id="address1" ng-value="item.billing_address1">
+				</div>
+				<div class="form-group">
+				  <label for="address2" class="input-label-md">Addreess 2</label>
+				  <input type="text" class="form-control input-lg" id="address2" ng-value="item.billing_address2">
+				</div>
+				<div class="form-group">
+				  <label for="city" class="input-label-md">City</label>
+				  <input type="text" class="form-control input-lg" id="city" ng-value="item.billing_city">
+				</div>
+				<div class="form-group col-md-6" id="state-edit">
+				  <label for="state" class="input-label-md">State</label>
+				  <input type="text" class="form-control input-lg" id="state" ng-value="item.billing_state">
+				</div>
+				<div class="form-group col-md-6" id="zip-edit">
+				  <label for="zip" class="input-label-md">Zip</label>
+				  <input type="number" class="form-control input-lg" id="zip" ng-value="item.billing_zip">
+				</div>
+				<button type="submit" class="btn-pharmeo btn-pharmacy-update btn-lg">Update</button>
+			</div>
+		</form>
+	</div>
+	<div class="col-md-6">
+
+	</div>
+</div>
+

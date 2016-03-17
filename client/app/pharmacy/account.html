@@ -1,86 +1,93 @@
 <div class="row" id="account-detail">
-	<div class="row">
-		<div class="col-md-12">
-			<p id="title-2">Account</p>
-			<span class="title-1">Admin Profile</span>
-			<a href="#"><img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon"></a>
-			<div ng-repeat="item in adminProfile">
-				<div class="row" id="admin-profile">
-					<div class="col-sm-4">
-						<p>Pharmacy</p>
-						<div class="account-content">
-							{{ item.pharmacy }}
-						</div>
-						<p>First Name</p>
-						<div class="account-content">
-							{{ item.f_name }}
-						</div>
+	<div class="col-md-12">
+		<p id="title-2" class="mb30">Account</p>
+		<span class="title-1">Admin Profile</span>
+		<a href="pharmacy.pharmacy-edit">
+			<img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon">
+		</a>
+		<div ng-repeat="item in vm.adminProfile">
+			<div class="row" id="admin-profile">
+				<div class="col-sm-4">
+					<p>Pharmacy</p>
+					<div class="account-content">
+						{{ item.pharmacy }}
 					</div>
-					<div class="col-sm-4">
-						<p>Last Name</p>
-						<div class="account-content">
-							{{ item.l_name }}
-						</div>
-						<p>Email</p>
-						<div class="account-content">
-							{{ item.email }}
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<p>Phone</p>
-						<div class="account-content">
-							{{ item.phone }}
-						</div>
+					<p>First Name</p>
+					<div class="account-content">
+						{{ item.f_name }}
 					</div>
 				</div>
-				<hr>
-				<span class="title-1">Billing</span>
-				<a href="#"><img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon"></a>
-				<div class="row" id="admin-billing">
-					<div class="col-sm-4">
-						<p>Account Type</p>
-						<div class="account-content">
-							{{ item.acctType }}
-						</div>
+				<div class="col-sm-4">
+					<p>Last Name</p>
+					<div class="account-content">
+						{{ item.l_name }}
 					</div>
-					<div class="col-sm-4">
-						<p>Account No.</p>
-						<div class="account-content">
-							{{ item.acctNo }}
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<p>Routing No.</p>
-						<div class="account-content">
-							{{ item.routing }}
-						</div>
+					<p>Email</p>
+					<div class="account-content">
+						{{ item.email }}
 					</div>
 				</div>
-				<hr>
-				<span class="title-1">Address</span>
-		<a href="#"><img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon"></a>
-				<div class="row" id="admin-address">
-					<div class="col-sm-4">
-						<p>{{ item.pharmacy }}</p>
-						<div class="account-content">
-							{{ item.street }} <br>
-							{{ item.city }}, {{ item.state}}<br>
-							{{ item.zip }}
-						</div>
+				<div class="col-sm-4">
+					<p>Phone</p>
+					<div class="account-content">
+						{{ item.phone }}
 					</div>
 				</div>
-				<hr>
-				<span class="title-1">Password</span>
-	<a href="#"><img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon"></a>
-				<div class="row" id="admin-password">
-					<div class="col-sm-4">
-						<p>Current Password</p>
-						<div class="account-content">
-							*************
-						</div>
+			</div>
+			<hr>
+			<span class="title-1">Billing</span>
+			<a href="pharmacy.billing-edit">
+				<img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon">
+			</a>
+			<div class="row" id="admin-billing">
+				<div class="col-sm-4">
+					<p>Account Type</p>
+					<div class="account-content">
+						{{ item.acctType }}
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p>Account No.</p>
+					<div class="account-content">
+						{{ item.acctNo }}
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<p>Routing No.</p>
+					<div class="account-content">
+						{{ item.routing }}
+					</div>
+				</div>
+			</div>
+			<hr>
+			<span class="title-1">Address</span>
+				<a href="pharmacy.address-edit">
+					<img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon">
+				</a>
+			<div class="row" id="admin-address">
+				<div class="col-sm-4">
+					<p>{{ item.pharmacy }}</p>
+					<div class="account-content">
+						{{ item.street }} <br>
+						{{ item.city }}, {{ item.state}}<br>
+						{{ item.zip }}
+					</div>
+				</div>
+			</div>
+			<hr>
+			<span class="title-1">Password</span>
+				<a href="pharmacy.password-edit">
+					<img src="/assets/icons/edit.svg" class="pull-right" width="40" alt="edit icon">
+				</a>
+			<div class="row" id="admin-password">
+				<div class="col-sm-4">
+					<p>Current Password</p>
+					<div class="account-content">
+						*************
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+

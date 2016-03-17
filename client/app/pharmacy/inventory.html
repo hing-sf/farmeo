@@ -1,3 +1,44 @@
+<div class="row" id="inventory-management">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<p id="title-2">Inventory Management</p>
+				<form role="form" class="order-search-input">
+				  <div class="form-group has-feedback has-feedback-left">
+				    <label class="control-label sr-only">Search</label>
+				    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
+				    <i class="form-control-feedback glyphicon glyphicon-search"></i>
+				  </div>
+				</form>
+			</div>
+			<div class="col-md-6 add-icon"></div>
+			<img ng-src="/assets/icons/add.svg" class="pull-right" width="50" alt="add icon">
+		</div>
+	</div>
+	<div id="prescription-details" ng-repeat="item in vm.prescriptions">
+		<div class="row">
+			<div class="col-xs-6">
+				<p>{{item.name}}</p>
+			</div>
+			<div class="col-xs-6 edit-icons">
+				<img ng-src="/assets/icons/delete.svg" class="delete-icon pull-right" width="15" alt="delete icon">
+				<img ng-src="/assets/icons/edit-blue.svg" type="button" class="edit-icon pull-right" width="40" alt="edit icon">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<h4>{{item.dose}}</h4>
+			</div>
+			<div class="col-xs-4">
+				<h4>{{item.stock}}</h4>
+			</div>
+			<div class="col-xs-4">
+				<h4 class="pull-right">${{item.price}}</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
 <table>
     <thead>
         <th>Name</th>
@@ -25,45 +66,4 @@
         <button class="btn-pharmeo"ng-click="reset()">Cancel</button>
     </td>
 </script>
-
-<!-- <div class="row" id="inventory-management">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="col-md-6">
-				<p id="title-2">Inventory Management</p>
-				<form role="form" class="order-search-input">
-				  <div class="form-group has-feedback has-feedback-left">
-				    <label class="control-label sr-only">Search</label>
-				    <input type="text" class="form-control input-lg" placeholder="Search Rx# and Patient" />
-				    <i class="form-control-feedback glyphicon glyphicon-search"></i>
-				  </div>
-				</form>
-			</div>
-			<div class="col-md-6 add-icon"></div>
-			<img ng-src="/assets/icons/add.svg" class="pull-right" width="50" alt="add icon">
-		</div>
-	</div>
-	<div id="prescription-details" ng-repeat="item in prescriptions">
-		<div class="row">
-			<div class="col-xs-6">
-				<p>{{item.name}}</p>
-			</div>
-			<div class="col-xs-6 edit-icons">
-				<img ng-src="/assets/icons/delete.svg" class="delete-icon pull-right" width="15" alt="delete icon">
-				<img ng-src="/assets/icons/edit-blue.svg" type="button" class="edit-icon pull-right" width="40" alt="edit icon">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4">
-				<h4>{{item.dose}}</h4>
-			</div>
-			<div class="col-xs-4">
-				<h4>{{item.stock}}</h4>
-			</div>
-			<div class="col-xs-4">
-				<h4 class="pull-right">${{item.price}}</h4>
-			</div>
-		</div>
-	</div>
-</div>
  -->

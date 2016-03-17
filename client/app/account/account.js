@@ -11,7 +11,7 @@ angular.module('pharmeoApp')
       })
       .state('logout', {
         url: '/logout?referrer',
-        referrer: 'main',
+        // referrer: 'main',
         template: '',
         controller: function($state, Auth) {
           var referrer = $state.params.referrer ||
