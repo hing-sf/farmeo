@@ -5,17 +5,17 @@
     margin-top: 70px;
     color: $white;
     #left-panel {
-      padding-right: 5%;
+      padding-right: 4%;
     }
     h2:nth-child(1) {
       font-weight: normal;
     }
     h2:nth-child(2) {
-      font-weight: 100;
+      /*font-weight: 100;*/
     }
     p {
-      font-size: 16px;
-      font-weight: 200;
+      font-size: 17px;
+      /*font-weight: 200;*/
       padding-top: 20px;
       line-height: 1.8;
       color: $white;
@@ -24,7 +24,7 @@
     .footer-contactus{
       text-align: left;
       margin-top: 75px;
-      font-weight: 100;
+/*      font-weight: 100;*/
       font-size: 22px;
       list-style-type: none;
       #footer-contact-us {
@@ -34,9 +34,10 @@
         font-size: 23px;
       }
       #footer-title {
-        font-weight: 200;
+        font-weight: normal;
         padding-bottom: 10px;
         font-size: 18px;
+        letter-spacing: 1px;
       }
       #footer-social-icons {
         margin:10px 0;
