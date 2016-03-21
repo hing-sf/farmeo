@@ -362,13 +362,6 @@ hr {
   color: $pharmeo-blue !important;
 }
 
-/*.nav-color {
-  color: $white;
-}*/
-/*.nav-text {
- color: $pharmeo-blue;
-}
-*/
 .font-white {
   color: $white !important;
 }
@@ -453,7 +446,7 @@ hr {
     h1 {
       color:$white;
       font-size: 3.2em;
-      font-weight: 200;
+      font-weight: 300;
     }
     h3 {
       color:$dk-blue;
@@ -583,6 +576,7 @@ hr {
       color: $gray;
       line-height: 1.5;
       padding-bottom: 20px;
+      font-weight: 300;
     }
   }
   #right-panel {
@@ -652,6 +646,9 @@ hr {
     margin-bottom: 50px;
   }
 
+  .pharmacy-signup-page {
+    margin-top: 100px;
+  }
 
   /* ==== navbar ======*/
   /* Reset responsive Bootstrap elements */

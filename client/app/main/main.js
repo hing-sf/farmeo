@@ -6,7 +6,7 @@ angular.module('pharmeoApp')
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        controller: 'MainController as main'
+        // controllerAs: 'main'
       });
   });

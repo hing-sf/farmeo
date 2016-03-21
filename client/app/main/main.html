@@ -3,7 +3,7 @@
     <div class="intro-message">
       <h1>World's first prescription marketplace</h1>
       <div class="col-md-12">
-        <button type="submit" ui-sref="signup" class="btn-pharmeo-45h">Get Started</button>
+        <button type="submit" ui-sref="signup" class="btn-pharmeo input-lg">Get Started</button>
       </div>
     </div>
   </div>
@@ -15,7 +15,7 @@
         <div class="col-md-12">
           <div class="panel panel-default">
             <table class="table">
-              <tr ng-repeat="item in section1">
+              <tr ng-repeat="item in main.section1">
                 <td>
                   <img src="{{ item.image }}" width="40" alt="search icon">
                 </td>
@@ -50,7 +50,7 @@
         <div class="col-md-12 writing-prescript">
           <h2>Employees typically save $140 per year</h2>
           <p>Pharmeo's recommendations help employees keep more of what they earn.</p>
-          <button type="submit" ui-sref="signup" class="btn-pharmeo-45h">Get Started</button>
+          <button type="submit" ui-sref="signup" class="btn-pharmeo input-lg">Get Started</button>
         </div>
       </div>
     </div>
@@ -87,44 +87,41 @@
           <h3>We Would love to hear from you about why you think it would be good to partner with us!</h3>
         </div>
         <div class="col-md-6" id="right-panel">
-          <form name="partner-form" ng-submit="partnerWithUs(partner)">
-            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Name.$valid && vm.submitted,
-                                                'has-error': partner-form.Pharmacy_Name.$invalid && vm.submitted }">
+          <form name="partnerForm" ng-submit="main.partnerRequest()">
+            <div class="form-group" ng-class="{ 'has-success': partnerForm.company.$valid && main.submitted, 'has-error': partnerForm.company.$invalid && main.submitted }">
               <input type="text"
-                     name="Pharmacy_Name"
+                     name="company"
                      class="form-control custom-input2"
-                     ng-model="vm.main.pharmacy_name"
+                     ng-model="main.partneringInfo.company"
                      placeholder="Company"
                      required/>
-              <p class="help-block" ng-show="partner-form.Pharmacy_Name.$error.required && vm.submitted">
-                A Pharmacy name is required
+              <p class="help-block" ng-show="partnerForm.company.$error.required && main.submitted">
+                Company name is required
               </p>
             </div>
-            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Email.$valid && vm.submitted,
-                                                'has-error': partner-form.Pharmacy_Email.$invalid && vm.submitted }">
+            <div class="form-group" ng-class="{ 'has-success': partnerForm.email.$valid && main.submitted, 'has-error': partnerForm.email.$invalid && main.submitted }">
               <input type="text"
-                     name="Pharmacy_Email"
+                     name="email"
                      class="form-control custom-input2"
-                     ng-model="vm.main.pharmacy_Email"
+                     ng-model="main.partneringInfo.email"
                      placeholder="Email"
                      required/>
-              <p class="help-block" ng-show="partner-form.Pharmacy_Email.$error.required && vm.submitted">
-                A Pharmacy email is required
+              <p class="help-block" ng-show="partnerForm.email.$error.required && main.submitted">
+                Company email is required
               </p>
             </div>
-            <div class="form-group" ng-class="{ 'has-success': partner-form.Pharmacy_Phone.$valid && vm.submitted,
-                                                'has-error': partner-form.Pharmacy_Phone.$invalid && vm.submitted }">
+            <div class="form-group" ng-class="{ 'has-success': partnerForm.phone.$valid && main.submitted, 'has-error': partnerForm.phone.$invalid && main.submitted }">
               <input type="text"
-                     name="Pharmacy_Phone"
+                     name="phone"
                      class="form-control custom-input2"
-                     ng-model="vm.main.pharmacy_Phone"
+                     ng-model="main.partneringInfo.phone"
                      placeholder="Phone"
                      required/>
-              <p class="help-block" ng-show="partner-form.Pharmacy_Phone.$error.required && vm.submitted">
-                A Pharmacy Phone number is required
+              <p class="help-block" ng-show="partnerForm.phone.$error.required && main.submitted">
+                Company Phone number is required
               </p>
             </div>
-            <button type="submit" class="btn-pharmeo-45h">Partner with us</button>
+            <button type="submit" class="btn-pharmeo input-lg">Partner with us</button>
           </form>
         </div>
       </div>
@@ -138,8 +135,8 @@
 
 
 
-<!--
-<div class="container">
+
+<!-- <div class="container">
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Features:</h1>

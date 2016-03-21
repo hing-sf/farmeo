@@ -6,7 +6,7 @@ angular.module('pharmeoApp')
     controller: function($scope) {
     	var isCollapsed = true;
 
-    	$(function(){
+        $scope.init = function() {
     		$scope.isNavbar = function(){
     			var pharmeoBlue = '#1D8DCD';
     			if(isCollapsed){
@@ -22,7 +22,7 @@ angular.module('pharmeoApp')
     				isCollapsed = true;
     			}
     		}
-    	}) // end jquery
+    	} // end jquery
     }
   }
 });

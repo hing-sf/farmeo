@@ -25,6 +25,8 @@ module.exports = function(config) {
       'client/bower_components/flow.js/dist/flow.js',
       'client/bower_components/ng-flow/dist/ng-flow.js',
       'client/bower_components/jquery-knob/js/jquery.knob.js',
+      'client/bower_components/angular-toastr/dist/angular-toastr.tpls.js',
+      'client/bower_components/angular-animate/angular-animate.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

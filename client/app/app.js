@@ -7,10 +7,12 @@ angular.module('pharmeoApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngAnimate',
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'toastr'
 ])
 .run(function($rootScope, $location, $urlRouter, $state, $stateParams, Auth) {
   $rootScope.baseUrl = $location.host(); // global base url
