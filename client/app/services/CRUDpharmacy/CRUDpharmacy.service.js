@@ -15,8 +15,7 @@ angular.module('pharmeoApp')
   		getPartnerRequest: function(){
   		    var request = $http({
   		        					'method': 'GET',
-  		        					'url': 'api/partnerRequests',
-					  		        'data': data
+  		        					'url': 'api/partnerRequests'
   		    })
   		    .error(this.onError)
   		    return request;

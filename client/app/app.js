@@ -25,13 +25,14 @@ angular.module('pharmeoApp', [
   var white = "#fff"
 
   $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-    var currentUrl = $location.path();
-    var homepageUrl = '/';
+    var currentUrl = baseUrl + $location.path();
+    var homepageUrl = baseUrl + '/';
     (function(){
         if(homepageUrl === currentUrl ){ // on Homepage
           $rootScope.ishomepage = true;
           $('#navbrandlogo img').attr("src",whitelogo);
           $('.nav-text').css('color', white);
+          $('.navbar-default').removeClass('bg-white');
           $('.navbar-default').css('border-bottom', 'transparent');
         } else {
           $rootScope.ishomepage = false;
@@ -60,13 +61,11 @@ angular.module('pharmeoApp', [
       var sy = scrollY();
         if ( sy >= changeHeaderOn) {
           if($rootScope.ishomepage){
-            console.log('is Homepage')
             $('.navbar-default').addClass('bg-white');
             $('.nav-text').css('color', pharmeoblue);
             $('#navbrandlogo img').attr("src",bluelogo);
           }
           if(!$rootScope.ishomepage){
-            console.log('is NOT Homepage')
             $('.navbar-default').addClass('bg-white');
             $('#navbrandlogo img').attr("src",bluelogo);
           }

@@ -7,8 +7,14 @@
 
     main.partneringInfo = {};
     main.section1 = dataService.section1;
-
     main.animationsEnabled = true;
+    main.errors = {};
+    main.submitted = false;
+
+    // Initialize function on page load, add funciton here to call on page load.
+    main.init = function(){
+      main.getPartners();
+    }
 
     main.opensetup = function (size) {
       var modalInstance = $uibModal.open({
@@ -33,34 +39,26 @@
     };
 
     main.partnerRequest = function() {
+      main.submitted = true;
       var data = main.partneringInfo;
-      CRUDpharmacy.postPartnerRequest(data)
-      .success(function(res){
-        toastr.success('Thank you for your interest in partnering with Pharmeo, your submission was successful and we will get in contact with you soon.');
-        main.partneringInfo = '';
-      })
-      .error(function(res, err){
-        console.log(err);
-      });
+      if(main.partnerForm.$valid){
+        CRUDpharmacy.postPartnerRequest(data)
+        .success(function(res){
+          toastr.success('Thank you for your interest in partnering with Pharmeo, your submission was successful and we will get in contact with you soon.');
+          main.submitted = false;
+          main.partneringInfo = '';
+          main.partnerForm.$setPristine();
+        });
+      };
     };
 
     main.getPartners = function(){
       CRUDpharmacy.getPartnerRequest()
       .success(function(res){
-        main.partners = res.data;
+        main.partners = res;
       });
     }
 
-
-    // ORIGINAL TEST DATA
-    // $http.get('/api/things').then(response => {
-    //   this.awesomeThings = response.data;
-    //   socket.syncUpdates('thing', this.awesomeThings);
-    // });
-
-    // $scope.$on('$destroy', function() {
-    //   socket.unsyncUpdates('thing');
-    // });
   });
 
 

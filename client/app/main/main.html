@@ -30,10 +30,7 @@
       </div>
     </div>
   </div>
-  <hr>
-
-  <!-- <button type="button" ng-click="main.opensetup('lg')">MODAL</button> -->
-
+<hr>
   <div id="main-sec-2">
     <div class="container">
       <div class="row">
@@ -87,37 +84,37 @@
           <h3>We Would love to hear from you about why you think it would be good to partner with us!</h3>
         </div>
         <div class="col-md-6" id="right-panel">
-          <form name="partnerForm" ng-submit="main.partnerRequest()">
-            <div class="form-group" ng-class="{ 'has-success': partnerForm.company.$valid && main.submitted, 'has-error': partnerForm.company.$invalid && main.submitted }">
+          <form name="main.partnerForm" ng-submit="main.partnerRequest()" novalidate>
+            <div class="form-group" ng-class="{ 'has-success': main.partnerForm.company.$valid && main.submitted, 'has-error': main.partnerForm.company.$invalid && main.submitted }">
               <input type="text"
                      name="company"
                      class="form-control custom-input2"
                      ng-model="main.partneringInfo.company"
                      placeholder="Company"
                      required/>
-              <p class="help-block" ng-show="partnerForm.company.$error.required && main.submitted">
+              <p class="help-block" ng-show="main.partnerForm.company.$error.required && main.submitted">
                 Company name is required
               </p>
             </div>
-            <div class="form-group" ng-class="{ 'has-success': partnerForm.email.$valid && main.submitted, 'has-error': partnerForm.email.$invalid && main.submitted }">
-              <input type="text"
+            <div class="form-group" ng-class="{ 'has-success': main.partnerForm.email.$valid && main.submitted, 'has-error': main.partnerForm.email.$invalid && main.submitted }">
+              <input type="email"
                      name="email"
                      class="form-control custom-input2"
                      ng-model="main.partneringInfo.email"
                      placeholder="Email"
                      required/>
-              <p class="help-block" ng-show="partnerForm.email.$error.required && main.submitted">
+              <p class="help-block" ng-show="main.partnerForm.email.$error.required && main.submitted">
                 Company email is required
               </p>
             </div>
-            <div class="form-group" ng-class="{ 'has-success': partnerForm.phone.$valid && main.submitted, 'has-error': partnerForm.phone.$invalid && main.submitted }">
+            <div class="form-group" ng-class="{ 'has-success': main.partnerForm.phone.$valid && main.submitted, 'has-error': main.partnerForm.phone.$invalid && main.submitted }">
               <input type="text"
                      name="phone"
                      class="form-control custom-input2"
                      ng-model="main.partneringInfo.phone"
                      placeholder="Phone"
                      required/>
-              <p class="help-block" ng-show="partnerForm.phone.$error.required && main.submitted">
+              <p class="help-block" ng-show="main.partnerForm.phone.$error.required && main.submitted">
                 Company Phone number is required
               </p>
             </div>
@@ -128,31 +125,3 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings">
-        <li><a href="#" tooltip="{{thing.title}}">{{thing.name}}<button type="button" class="close" ng-click="main.deleteThing(thing)">&times;</button></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="main.newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
-</div> -->
