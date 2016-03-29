@@ -20,6 +20,23 @@ angular.module('pharmeoApp')
   		    .error(this.onError)
   		    return request;
   		},
+      postNewPharmacy: function(data){
+            var request = $http({
+                          'method': 'POST',
+                          'url': '/api/pharmacys',
+                          'data': data
+            })
+            .error(this.onError)
+            return request;
+      },
+      getPharmacy: function(id){
+          var request = $http({
+                        'method': 'GET',
+                        'url': 'api/pharmacys/' + id
+          })
+          .error(this.onError)
+          return request;
+      },
 
   		onError: function(error,status){
   			var err = status;

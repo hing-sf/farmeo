@@ -1,7 +1,7 @@
 
 <section class="form-layout">
     <h2>Type in your account info to receive payments</h2>
-  <form class="form" name="form" novalidate>
+  <!-- <form class="form" name="form" novalidate> -->
     <div class="row">
       <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
@@ -9,7 +9,7 @@
           <input type="text"
                  name="text"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.name"
+                 ng-model="pharmacyData.name"
                  placeholder="Pharmacy Name"
                  />
           <p class="help-block" ng-show="form.name.$error.name && vm.submitted">
@@ -28,7 +28,7 @@
           <input type="text"
                  name="bankAcctNo"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.bankAcctNo"
+                 ng-model="pharmacyData.bankAcctNo"
                  placeholder="Bank Account No."
                  />
           <p class="help-block"
@@ -45,7 +45,7 @@
           <input type="text"
                  name="bankAcctRoute"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.bankAcctRoute"
+                 ng-model="pharmacyData.bankAcctRoute"
                  placeholder="Bank Account Route."
                  />
           <p class="help-block"
@@ -65,6 +65,6 @@
     <div class="skip-now">
       <h4><a href="pharmacy-setup.step4">Skip for now</a></h4>
     </div>
-  </form>
+  <!-- </form> -->
 </section>
 

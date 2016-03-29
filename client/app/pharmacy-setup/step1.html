@@ -1,6 +1,6 @@
 <section class="form-layout">
     <h2>Type in your Pharmacy information</h2>
-  <form class="form" name="form" novalidate>
+  <!-- <form class="form" name="form" novalidate> -->
     <div class="row">
       <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
@@ -8,7 +8,7 @@
           <input type="text"
                  name="text"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.name"
+                 ng-model="pharmacyData.name"
                  placeholder="Pharmacy Name"
                  required
                  />
@@ -28,7 +28,7 @@
           <input type="text"
                  name="address1"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.address1"
+                 ng-model="pharmacyData.address1"
                  placeholder="Address 1"
                  required
                  />
@@ -46,7 +46,7 @@
           <input type="text"
                  name="address2"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.address2"
+                 ng-model="pharmacyData.address2"
                  placeholder="Address 2"
                  />
         </div>
@@ -59,7 +59,7 @@
           <input type="text"
                  name="city"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.city"
+                 ng-model="pharmacyData.city"
                  placeholder="City"
                  required
                  />
@@ -77,7 +77,7 @@
           <input type="text"
                  name="state"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.state"
+                 ng-model="pharmacyData.state"
                  placeholder="State"
                  required
                  />
@@ -92,7 +92,7 @@
           <input type="text"
                  name="zip"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.zip"
+                 ng-model="pharmacyData.zip"
                  placeholder="Zip"
                  required
                  />
@@ -109,7 +109,7 @@
           <input type="email"
                  name="email"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.email"
+                 ng-model="pharmacyData.email"
                  placeholder="Email"
                  required
                  />
@@ -132,7 +132,7 @@
           <input type="text"
                  name="phone"
                  class="form-control custom-input-50"
-                 ng-model="vm.pharmacy.phone"
+                 ng-model="pharmacyData.phone"
                  placeholder="Phone"
                  required
                  />
@@ -152,6 +152,6 @@
         <button ui-sref="pharmacy-setup.step2" type="button" class="btn-pharmeo btn-100w input-lg btn-reset">Next</button>
       </div>
     </div>
-  </form>
+  <!-- </form> -->
 </section>
 

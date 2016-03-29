@@ -14,8 +14,9 @@ export default function(app) {
   var upload = multer({dest: './uploads/'});
   var type = upload.array('file');
   // Insert routes below
+  app.use('/api/pharmacyFiles', type, require('./api/pharmacyFile')); // route to upload pharmacy files
   app.use('/api/partnerRequests', require('./api/partnerRequest'));
-  app.use('/api/pharmacys', type, require('./api/pharmacy')); // route to upload pharmacy files
+  app.use('/api/pharmacys', require('./api/pharmacy'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
